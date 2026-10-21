@@ -27,7 +27,17 @@ def img(src, alt, fit=False, bg=None, ratio=None):
 # Order here is the order on the Home page and the "Next project" chain.
 PROJECTS = [
   {
-    "slug": "dreamcast", "title": "DreamCast", "year": "2025", "featured": True,
+    "slug": "intertwine", "title": "Intertwine", "year": "2026", "layout": "intertwine", "featured": True,
+    "tags": "iOS app · Website · Brand",
+    "summary": "One wedding, in one place: an iPhone app where couples plan events, guests and a registry, and a website where every guest RSVPs with a personal link. Designed and built from research to working code.",
+    "cover_phones": ["images/intertwine/o7-home.jpg", "images/intertwine/gh1-guesthome.jpg"],
+    "eyebrow": "Case study · iOS app & website · 2026",
+    "intro": "One wedding, in one place. An iPhone app where couples plan events, guests and a registry, and a website where each guest opens a personal invite link: no app or account needed.",
+    "facts": [("My role", "Research, UX/UI, brand, and building the app and website"), ("Timeline", "Fall 2026"),
+              ("Course", "Everyday Enhancements, Module 3 · MassArt"), ("Tools", "Figma, SwiftUI, HTML/CSS/JS, Supabase")],
+  },
+  {
+    "slug": "dreamcast", "title": "DreamCast", "year": "2025",
     "tags": "App concept · UX/UI · Motion",
     "summary": "A Headspace feature that helps you fall asleep and remember your dreams. Personas, journey maps, storyboards, the interface and a motion video, made over seven weeks.",
     "cover": img("images/dreamcast/cover.jpg", "DreamCast on an iPhone lock screen", fit=True, bg="ink"),
@@ -50,16 +60,6 @@ PROJECTS = [
         ("Week 7", "Polish", "Pacing, color and readability, checked against Flora's goals.")]},
     "outcome": {"quote": "“Refining ideas through research and iteration made something more focused and meaningful.”",
                 "body": "The final pieces were a polished interface and a video of the full bedtime flow. The biggest lesson: balancing creativity with simplicity, on a deadline."},
-  },
-  {
-    "slug": "intertwine", "title": "Intertwine", "year": "2026", "layout": "intertwine",
-    "tags": "iOS app · Website · Brand",
-    "summary": "One wedding, in one place: an iPhone app for couples and a personal invite website for every guest.",
-    "cover_phones": ["images/intertwine/o7-home.png", "images/intertwine/gh1-guesthome.png"],
-    "eyebrow": "Case study · iOS app & website · 2026",
-    "intro": "One wedding, in one place. An iPhone app where couples plan events, guests and a registry, and a website where each guest opens a personal invite link: no app or account needed.",
-    "facts": [("My role", "Research, UX/UI, brand, and building the app and website"), ("Timeline", "Fall 2026"),
-              ("Course", "Everyday Enhancements, Module 3 · MassArt"), ("Tools", "Figma, SwiftUI, HTML/CSS/JS, Supabase")],
   },
   {
     "slug": "droplet", "title": "Droplet", "year": "", "hidden": True,
@@ -221,7 +221,7 @@ VISIBLE = [p for p in PROJECTS if not p.get("hidden")]
 
 
 # ---------------------------------------------------------------- layout
-def head(title, desc, r, image="images/me.jpg", path=""):
+def head(title, desc, r, image="images/share.jpg", path=""):
     full = "Amanda Hanssen" if title == "Home" else f"{title} · Amanda Hanssen"
     return f"""<!doctype html>
 <html lang="en">
@@ -316,7 +316,7 @@ def page_home():
   <h1 class="display-xl">Designing everyday things that feel <em class="accent">personal.</em></h1>
   <div class="hero-row">
     <p class="body-l">I'm Amanda, a design student at MassArt. I make brands, apps and spaces, from a café identity to a wedding app for couples and their guests.</p>
-    <div class="latest"><p class="label muted">Latest</p><p><a href="work/intertwine.html">Intertwine</a>, a wedding app for couples and a website for their guests (Fall 2026).</p></div>
+    <div class="latest"><p class="label muted">Currently</p><p>Looking for design and marketing internships for summer 2027.</p></div>
   </div>
 </section></div>
 <section class="wrap">
@@ -442,7 +442,7 @@ def page_intertwine(p):
         return f'<figure>{ph(name, alt)}<figcaption class="body-s muted">{escape(text)}</figcaption></figure>'
     html = case_top(p, r)
     html += f"""<section class="wrap"><div class="phones-panel">
-  {ph("o1-welcome.png", "Intertwine welcome screen")}{ph("o7-home.png", "Couple home screen", "big")}{ph("gh1-guesthome.png", "Guest home screen")}
+  {ph("o1-welcome.jpg", "Intertwine welcome screen")}{ph("o7-home.jpg", "Couple home screen", "big")}{ph("gh1-guesthome.jpg", "Guest home screen")}
 </div></section>
 <section class="wrap split">
   <p class="label muted">The problem</p>
@@ -452,23 +452,23 @@ def page_intertwine(p):
 <section class="wrap">
   <div class="section-head"><h2 class="heading-m">For the couple</h2><span class="label muted">iPhone app</span></div>
   <div class="phone-row">
-    {cap("o54-preview.png", "Guest preview screen", "Preview what guests will see")}
-    {cap("cg2-rsvp.png", "RSVP tracking screen", "Track RSVPs in real time")}
-    {cap("cr1-registry.png", "Registry screen", "Build a registry and funds")}
-    {cap("o7-home-dark.png", "Home screen in dark mode", "Light and dark mode")}
+    {cap("o54-preview.jpg", "Guest preview screen", "Preview what guests will see")}
+    {cap("cg2-rsvp.jpg", "RSVP tracking screen", "Track RSVPs in real time")}
+    {cap("cr1-registry.jpg", "Registry screen", "Build a registry and funds")}
+    {cap("o7-home-dark.jpg", "Home screen in dark mode", "Light and dark mode")}
   </div>
 </section>
 <section class="guests"><div class="wrap">
   <div class="section-head"><h2 class="heading-m">For guests</h2><span class="label muted">Website · personal invite link</span></div>
   <div class="site-row">
     <div class="shot"><img src="{I}site-desktop.jpg" alt="Guest website on desktop" loading="lazy"></div>
-    {ph("site-mobile.png", "Guest website on a phone")}
+    {ph("site-mobile.jpg", "Guest website on a phone")}
   </div>
   <div class="phone-row">
-    {cap("gs1-schedule.png", "Schedule screen", "The schedule, event by event")}
-    {cap("gw1-wear.png", "What to wear screen", "What to wear, with outfit ideas")}
-    {cap("gd2-registry.png", "Guest registry screen", "“I'll get this” on the registry")}
-    {cap("gh1-guesthome.png", "Guest home screen", "RSVP in one tap")}
+    {cap("gs1-schedule.jpg", "Schedule screen", "The schedule, event by event")}
+    {cap("gw1-wear.jpg", "What to wear screen", "What to wear, with outfit ideas")}
+    {cap("gd2-registry.jpg", "Guest registry screen", "“I'll get this” on the registry")}
+    {cap("gh1-guesthome.jpg", "Guest home screen", "RSVP in one tap")}
   </div>
 </div></section>
 <section class="wrap" style="display:grid;gap:48px">
@@ -498,7 +498,7 @@ def page_personal():
     def piece(name, title, sub="", cls=""):
         s = f'<p class="body-s muted">{sub}</p>' if sub else ""
         return f'<figure class="{cls}"><img src="{P}{name}" alt="{escape(title)}" loading="lazy"><figcaption class="heading-s">{escape(title)}</figcaption>{s}</figure>'
-    html = head("Personal work", "Posters, hand-painted sneakers and handmade characters by Amanda Hanssen.", r, image="images/personal/angels.jpg", path="personal.html")
+    html = head("Personal work", "Posters, hand-painted sneakers and handmade characters by Amanda Hanssen.", r, path="personal.html")
     html += f'<div class="sky" id="top">{nav(r, "personal")}'
     html += """<section class="wrap hero">
   <p class="label accent">Personal work</p>

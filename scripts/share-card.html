@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share card</title>
+<!-- Rendered to images/share.jpg (1200×630) with headless Chrome. Matches the "Share card" frame in Figma. -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; }
+  .card { width: 1200px; height: 630px; padding: 72px 80px; display: flex; flex-direction: column; justify-content: space-between;
+    background: linear-gradient(180deg, #B5BEDD 0%, #E6DCDD 55%, #FFEDD5 100%); color: #2B0616; font-family: "DM Sans", sans-serif; }
+  .top { display: flex; align-items: center; justify-content: space-between; }
+  .mono { width: 96px; height: 96px; background: #470B24;
+    -webkit-mask: url("../images/monogram.png") center / contain no-repeat; mask: url("../images/monogram.png") center / contain no-repeat; }
+  .label { font-weight: 600; font-size: 20px; letter-spacing: .12em; text-transform: uppercase; color: #4F5B9A; }
+  h1 { font: 400 132px/0.95 "Instrument Serif", serif; }
+  h1 em { color: #4F5B9A; }
+  .bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+  .url { font-weight: 500; font-size: 26px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top"><span class="mono"></span><span class="label">Portfolio</span></div>
+  <h1>Amanda Hanssen</h1>
+  <div class="bottom"><p class="label" style="color:#2B0616">Communication Designer · MassArt</p><p class="url">amhanssen.github.io</p></div>
+</div>
+</body>
+</html>
