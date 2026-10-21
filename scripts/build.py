@@ -6,6 +6,7 @@ It writes index.html, about.html, personal.html, 404.html and work/*.html.
 To change words or images, edit the content in this file and run it again.
 A project with "hidden": True is left off the site (no page, no link).
 """
+import re
 from html import escape
 from pathlib import Path
 
@@ -584,6 +585,16 @@ def page_404():
     return html + footer(r)
 
 
+
+def typeset(html):
+    """Typographer's quotes, single spaces, and hung opening quotes (see the Beautiful Type Checklist)."""
+    html = re.sub(r"(?<=[A-Za-z])(?:'|&#x27;)(?=[A-Za-z])", "\u2019", html)   # I'm -> I’m
+    html = html.replace("&nbsp;&nbsp;", " ").replace("&nbsp; ", " ")          # no double spaces
+    html = re.sub(r'class="display-l quote">(“|&quot;)', 'class="display-l quote hang">“', html)
+    html = re.sub(r'class="display-xl quote">(“)', 'class="display-xl quote hang">“', html)
+    return html
+
+
 def main():
     out = {"index.html": page_home(), "about.html": page_about(), "personal.html": page_personal(), "404.html": page_404()}
     for p in VISIBLE:
@@ -593,6 +604,7 @@ def main():
         if p.get("hidden"):
             (ROOT / "work" / f"{p['slug']}.html").unlink(missing_ok=True)
     for path, html in out.items():
+        html = typeset(html)
         f = ROOT / path
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(html, encoding="utf-8")
