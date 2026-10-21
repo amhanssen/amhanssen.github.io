@@ -19,8 +19,8 @@ RESUME = "files/Amanda-Hanssen-Resume.pdf"
 GUEST_SITE = "https://amhanssen.github.io/Intertwine/?invite=demo-rosa"
 
 
-def img(src, alt, fit=False, bg=None, ratio=None):
-    return {"src": src, "alt": alt, "fit": fit, "bg": bg, "ratio": ratio}
+def img(src, alt, fit=False, bg=None, ratio=None, cap=None):
+    return {"src": src, "alt": alt, "fit": fit, "bg": bg, "ratio": ratio, "cap": cap}
 
 
 # ---------------------------------------------------------------- projects
@@ -109,28 +109,75 @@ PROJECTS = [
     "cover": img("images/bench/cover.jpg", "The Bench festival program, tickets and envelope"),
     "eyebrow": "Case study · Brand identity · 2025",
     "intro": "An identity for a new film festival of true crime, documentary and psychological drama, designed as a study of judgment and truth.",
-    "facts": [("My role", "Festival concept, identity, 24-page program, poster and digital applications"), ("Timeline", "6 weeks · Fall 2025"),
-              ("Course", "Graphic Design 2: Making Meaning, with Joe Quackenbush"), ("Tools", "Figma, Illustrator, Adobe Suite")],
+    "facts": [("My role", "Concept, naming, identity, 24-page program, poster and digital applications"), ("Timeline", "6 weeks · Fall 2025"),
+              ("Course", "Graphic Design 2: Making Meaning, with Joe Quackenbush"), ("Tools", "Illustrator, InDesign, Photoshop, Figma")],
     "hero": [img("images/bench/applications.jpg", "The Bench brand applications title card", fit=True, bg="ink", ratio="1280/620")],
-    "idea": ("The idea", "Go beyond the sensationalism of true crime.",
-             "The festival asks why we're drawn to stories of investigation and morality. A visual thesis set the direction, a 15-film lineup was curated for three Boston venues, and every piece invites viewers to become active participants, not passive watchers."),
-    "feature": {"title": "From noir to the courtroom", "label": "How the identity changed", "ratio": "410/360", "cards": [
-        {"k": "Weeks 1–2", "t": "First direction", "d": "Moodboards weighing clinical surveillance against cinematic noir, and 100 wordmark sketches.", "img": img("images/bench/wordmarks.jpg", "Early hand-drawn wordmark", fit=True, bg="paper")},
-        {"k": "Week 5", "t": "The reset", "d": "A shift to the justice system: scales of justice, a gavel border and transcript-style text.", "img": img("images/bench/reset.jpg", "Scales logo and color palette", fit=True, bg="paper")},
-        {"k": "Week 6", "t": "The system", "d": "Navy, aged cream and crimson, with gavel patterns that carry across every piece.", "img": img("images/bench/pattern.jpg", "Gavel pattern system", fit=True, bg="paper")}]},
-    "process": {"title": "Six weeks, one verdict.", "steps": [
+    "story": [
+      {"type": "split", "label": "The brief", "heading": "Invent a film festival, then give it a voice.",
+       "body": ["Graphic Design 2 asked us to create a festival from scratch: a name, a mission, a lineup, a visual identity and a printed program. I chose the space where true crime, documentary and psychological drama meet.",
+                "My mission statement: to show how true stories can be cinematic, emotional and thoughtful, beyond just headlines. The audience: film fans, true-crime fans, justice-minded viewers and curious people who want more than the sensational version."]},
+      {"type": "images", "title": "Research", "label": "Week 1", "cols": 3,
+       "intro": "I looked at three existing festivals (the UK’s True Crime Film Festival, True Crime Fest in Europe and the Toronto True Crime Film Festival), curated a 15-film lineup, and made three moodboards to test different moods.",
+       "images": [img("images/bench/moodboard-1.jpg", "Moodboard 1", ratio="16/9", cap="Moodboard I: crime-scene evidence, case files and a red-and-black thriller mood."),
+                  img("images/bench/moodboard-2.jpg", "Moodboard 2", ratio="16/9", cap="Moodboard II: bold editorial illustration with a bit of satire."),
+                  img("images/bench/moodboard-3.jpg", "Moodboard 3", ratio="16/9", cap="Moodboard III: the courtroom, with gavels, scales and Lady Justice. This one became the final direction.")]},
+      {"type": "images", "cols": 1,
+       "images": [img("images/bench/lineup.jpg", "Proposed film lineup", ratio="16/9", cap="The proposed lineup, from Boston Strangler and Girl in the Basement to The Alabama Solution and The Truth vs. Alex Jones.")]},
+      {"type": "beforeafter", "title": "From The Evidence Room to The Bench", "label": "Weeks 1–5",
+       "intro": "My first concept, The Evidence Room, leaned on crime-scene clichés: black, red, police tape and case files. After critique, I reset the whole idea around the courtroom. The festival became less about the crime and more about judgment.",
+       "before": img("images/bench/evidence-room.jpg", "The Evidence Room title slide", ratio="16/9", cap="Week 1: The Evidence Room, a stark white sans on black with a forensic red line."),
+       "after": img("images/bench/final-cover.jpg", "The Bench final program cover", fit=True, bg="paper", ratio="16/9", cap="Week 6: The Bench, with navy, aged cream and a hand-drawn scale."),
+       "notes": ["The name moved from the crime to the verdict. The bench is where a judge sits, and where the audience sits to watch.",
+                 "Red went from blood to a single accent. Navy and cream took over to feel institutional and trustworthy.",
+                 "The scale replaced crime-scene imagery and doubles as the wordmark, with “The” and “Bench” resting in its two pans."]},
+      {"type": "images", "title": "Finding the mark", "label": "Weeks 2–3", "cols": 2,
+       "intro": "I drew 100 wordmark variations, exploring redacted and forensic letterforms, then refined three directions in Illustrator so they’d hold up from a ticket stub to a poster.",
+       "images": [img("images/bench/draft-logo.jpg", "Early hand-drawn wordmark", fit=True, bg="paper", ratio="4/3", cap="An early hand-drawn wordmark: playful, but too light for the subject."),
+                  img("images/bench/logo-colors.jpg", "Final scale mark in four colors", fit=True, bg="paper", ratio="4/3", cap="The final scale mark, tested in the brand colors.")]},
+      {"type": "system", "title": "The system", "label": "Design decisions",
+       "intro": "Every choice points back to one idea, a formal judicial dossier: authoritative colors, document-like paper and type that reads like a court transcript.",
+       "colors": [("Pantone 533 C", "#263854", "Primary: authority"), ("Pantone 468 C", "#E7DDCD", "Aged document cream"),
+                  ("Pantone 3546 C", "#C63430", "Accent: tension, used sparingly"), ("Pantone 4975 C", "#4D3D3D", "Deep shadow"), ("Pantone 7544 C", "#ABB0BB", "Secondary type")],
+       "type_faces": [("Display", "Social Gothic", "Condensed, slightly rough capitals that feel stamped and urgent, for titles and the wordmark."),
+                      ("Text", "Paralucent", "A clean, geometric sans for synopses, schedules and credits, like a court transcript.")],
+       "images": [img("images/bench/colors.jpg", "Scale mark in the five Pantone colors", fit=True, bg="paper", ratio="4/3", cap="The scale mark in all five Pantone colors."),
+                  img("images/bench/patterns.jpg", "Gavel and column patterns", ratio="4/3", cap="Gavel and column patterns, used as borders across every piece.")]},
+      {"type": "beforeafter", "title": "Reworking the program", "label": "Weeks 3–6",
+       "intro": "The program had to hold a lot: 15 films, three days, synopses, ratings, quotes and showtimes. My first drafts were loud; the final version is calmer, so the information can do the work.",
+       "before": img("images/bench/draft-program.jpg", "First program draft", fit=True, bg="paper", ratio="16/10", cap="First draft: red, white and blue film pages with heavy headers."),
+       "after": img("images/bench/spread-day2.jpg", "Final program spread", fit=True, bg="paper", ratio="16/10", cap="Final spread: cream pages, gavel borders and a steady grid."),
+       "notes": ["Moved from loud patriotic colors to the courtroom palette.",
+                 "Built one grid so stills, synopses, ratings and showtimes sit in the same place on every page.",
+                 "Added the gavel border so every page reads as part of one dossier."]},
+      {"type": "images", "title": "The 24-page program", "label": "Final", "cols": 3,
+       "images": [img("images/bench/spread-mission.jpg", "Mission and schedule spread", fit=True, bg="paper", ratio="16/10", cap="The mission and the three-day schedule."),
+                  img("images/bench/spread-venue.jpg", "Opening day spread with venue map", fit=True, bg="paper", ratio="16/10", cap="Opening day, with a map of the venue."),
+                  img("images/bench/spread-day3.jpg", "Day 3 film spread", fit=True, bg="paper", ratio="16/10", cap="Day 3: each spread pairs two films with stills, quotes and details.")]},
+      {"type": "steps", "heading": "Six weeks, one verdict.", "steps": [
         ("Week 1", "Discovery", "Mission, visual thesis, 15-film lineup and three moodboards."),
         ("Week 2", "Identity", "100 wordmarks exploring redacted and forensic letterforms."),
-        ("Weeks 3–4", "Refine", "Optical scaling for three logos and 10 program sketches."),
-        ("Week 5", "Rediscovery", "A conceptual reset toward judgment and truth."),
-        ("Week 6", "Synthesis", "Grid, gavel borders and a scale icon across every touchpoint.")],
-        "images": [img("images/bench/program-sketches.gif", "Animation flipping through program layout sketches", fit=True, bg="apricot", ratio="628/480"),
-                   img("images/bench/program.jpg", "Final program cover", fit=True, bg="apricot", ratio="628/480")]},
-    "outcome": {"quote": "“Beyond the headlines, just seeking truth through cinema.”",
-                "body": "The final pieces: a 24-page program designed like a formal judicial dossier, a large brand poster, tickets and a set of digital applications.",
-                "video": {"src": "videos/bench-breathing.mp4", "poster": "images/bench/breathing-poster.jpg", "caption": "“Breathe in”: a calming motion piece built from the gavel pattern, for screens at the festival. 1 min."},
-                "images": [img("images/bench/tickets.jpg", "Festival tickets", ratio="628/500"),
-                           img("images/bench/bus-shelter.jpg", "Posters in a bus shelter", ratio="628/500")]},
+        ("Weeks 3–4", "Refine", "Three logo directions refined and 10 program sketches."),
+        ("Week 5", "Reset", "A new concept built around judgment and the courtroom."),
+        ("Week 6", "Synthesis", "Grid, gavel borders and the scale icon across every touchpoint.")]},
+      {"type": "images", "title": "Brand applications", "label": "Print & digital", "cols": 3,
+       "images": [img("images/bench/newspaper-layout.jpg", "Newspaper ad layout", ratio="4/3", cap="A newspaper ad: “Take your seat at the bench.”"),
+                  img("images/bench/bus-shelter.jpg", "Posters in a bus shelter", ratio="4/3", cap="Posters in a bus shelter."),
+                  img("images/bench/posters.jpg", "Poster series", ratio="4/3", cap="A poster series pairing film stills with the festival’s lines."),
+                  img("images/bench/web.jpg", "Website screens", ratio="4/3", cap="Website screens for tickets and the lineup."),
+                  img("images/bench/notebook.jpg", "Notebook with gavel pattern", ratio="4/3", cap="A notebook wrapped in the gavel pattern."),
+                  img("images/bench/tickets.jpg", "Festival tickets", ratio="4/3", cap="Tickets for each festival day.")]},
+      {"type": "video", "title": "Breathe in", "label": "Motion",
+       "src": "videos/bench-breathing.mp4", "poster": "images/bench/breathing-poster.jpg",
+       "cap": "A calming motion piece built from the gavel pattern, for screens between films. 1 min."},
+      {"type": "images", "title": "Printed and assembled", "label": "Physical deliverables", "cols": 3,
+       "images": [img("images/bench/photo-envelope.jpg", "Printed program, envelope and tickets", ratio="4/3", cap="The printed program, envelope and tickets."),
+                  img("images/bench/photo-spread.jpg", "Inside the printed program", ratio="4/3", cap="Inside the printed program."),
+                  img("images/bench/photo-newspaper.jpg", "Printed newspaper ad", ratio="4/3", cap="The printed newspaper ad.")]},
+      {"type": "reflection", "quote": "“Beyond the headlines, just seeking truth through cinema.”", "points": [
+        ("What worked", "Resetting the concept in week 5 was scary, but it gave every piece one clear idea, judgment, and after that each decision got easier."),
+        ("What I learned", "A strong metaphor does more than a strong image. The scale, the bench and the gavel all point back to the same question."),
+        ("Next time", "I’d test my concept on people earlier, before spending weeks on a direction, and push the website further.")]},
+    ],
   },
   {
     "slug": "paws-pastries", "title": "Paws & Pastries", "year": "2025",
@@ -408,6 +455,8 @@ def page_case(p):
     r = "../"
     if p.get("layout") == "intertwine":
         return page_intertwine(p)
+    if p.get("story"):
+        return page_story(p)
     html = case_top(p, r)
     html += '<section class="wrap"><div class="media">' + "".join(figure(i, r) for i in p["hero"]) + "</div></section>\n"
     lab, title, body = p["idea"]
@@ -445,6 +494,70 @@ def page_case(p):
     if o.get("images"):
         html += '<div class="media">' + "".join(figure(i, r) for i in o["images"]) + "</div>"
     html += "</div></section>\n"
+    return html + next_html(p, r) + footer(r)
+
+
+
+# ---------------------------------------------------------------- detailed case study ("story")
+def cap_figure(i, r, extra=""):
+    """An image with an optional caption underneath."""
+    f = figure(i, r, extra)
+    if i.get("cap"):
+        return f'<div class="capfig">{f}<p class="body-s muted caption">{escape(i["cap"])}</p></div>'
+    return f
+
+
+def block_html(b, r):
+    t = b["type"]
+    head = ""
+    if b.get("title"):
+        head = f'<div class="section-head"><h2 class="heading-m">{escape(b["title"])}</h2><span class="label muted">{escape(b.get("label", ""))}</span></div>'
+    intro = f'<p class="body-l measure story-intro">{escape(b["intro"])}</p>' if b.get("intro") else ""
+    if t == "split":
+        paras = "".join(f'<p class="body-l">{escape(x)}</p>' for x in b["body"])
+        return f'<section class="wrap split"><p class="label muted">{escape(b["label"])}</p><div class="stack"><h2 class="heading-m">{escape(b["heading"])}</h2>{paras}</div></section>\n'
+    if t == "images":
+        cols = b.get("cols", len(b["images"]))
+        figs = "".join(cap_figure(i, r) for i in b["images"])
+        return f'<section class="wrap">{head}{intro}<div class="grid cols-{cols}">{figs}</div></section>\n'
+    if t == "beforeafter":
+        bef, aft = b["before"], b["after"]
+        notes = "".join(f"<li>{escape(n)}</li>" for n in b.get("notes", []))
+        return f'''<section class="wrap">{head}{intro}<div class="ba">
+  <div><p class="label muted">Before</p>{cap_figure(bef, r)}</div>
+  <div><p class="label accent">After</p>{cap_figure(aft, r)}</div>
+</div>{f'<ul class="changes">{notes}</ul>' if notes else ""}</section>\n'''
+    if t == "system":
+        sw = "".join(f'<div class="swatch"><span style="background:{h}"></span><p class="body-s"><strong>{escape(n)}</strong><br><span class="muted">{escape(role)}</span></p></div>' for n, h, role in b["colors"])
+        ty = "".join(f'<div class="typecard"><p class="label muted">{escape(role)}</p><p class="heading-s">{escape(name)}</p><p class="body-s muted">{escape(why)}</p></div>' for role, name, why in b["type_faces"])
+        figs = "".join(cap_figure(i, r) for i in b.get("images", []))
+        return f'''<section class="system"><div class="wrap">{head}{intro}
+  <div class="system-row"><div><p class="label muted">Color</p><div class="swatches">{sw}</div></div>
+  <div><p class="label muted">Type</p><div class="typecards">{ty}</div></div></div>
+  {f'<div class="grid cols-{len(b["images"])}">{figs}</div>' if figs else ""}
+</div></section>\n'''
+    if t == "steps":
+        st = "".join(f'<div><p class="label accent">{w}</p><h3 class="heading-s">{escape(h)}</h3><p class="body-s muted">{escape(d)}</p></div>' for w, h, d in b["steps"])
+        return f'<section class="process"><div class="wrap"><p class="label muted">{escape(b.get("label","Process"))}</p><h2 class="display-l">{escape(b["heading"])}</h2><div class="steps">{st}</div></div></section>\n'
+    if t == "video":
+        v = b
+        return f'''<section class="wrap">{head}<figure class="video"><video controls playsinline preload="none" poster="{r}{v["poster"]}"><source src="{r}{v["src"]}" type="video/mp4">Your browser can’t play this video.</video><figcaption class="body-s muted">{escape(v["cap"])}</figcaption></figure></section>\n'''
+    if t == "reflection":
+        items = "".join(f'<div><p class="label light">{escape(k)}</p><p class="body-l">{escape(v)}</p></div>' for k, v in b["points"])
+        return f'''<section class="dark reflection"><div class="wrap">
+  <p class="label light">{escape(b.get("label","Reflection"))}</p>
+  <p class="display-l quote hang">{escape(b["quote"])}</p>
+  <div class="reflect-grid">{items}</div>
+</div></section>\n'''
+    raise ValueError("unknown block " + t)
+
+
+def page_story(p):
+    r = "../"
+    html = case_top(p, r)
+    html += '<section class="wrap"><div class="media">' + "".join(figure(i, r) for i in p["hero"]) + "</div></section>\n"
+    for b in p["story"]:
+        html += block_html(b, r)
     return html + next_html(p, r) + footer(r)
 
 
