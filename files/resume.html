@@ -10,40 +10,40 @@
 <style>
   /* Matches the "Resume — Letter" frame in the Figma file. Printed to PDF with Chrome. */
   @page { size: 8.5in 11in; margin: 0; }
-  :root { --ink:#2B0616; --muted:#7A4E5E; --crimson:#470B24; --peri:#4F5B9A; }
+  :root { --ink:#2B0616; --muted:#5E3B49; --crimson:#470B24; --peri:#4F5B9A; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: #fff; }
-  body { font-kerning: normal; font-variant-ligatures: common-ligatures; color: var(--ink); font: 400 11.5px/1.45 "DM Sans", sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .page { width: 816px; height: 1056px; margin: 0 auto; padding: 48px 52px 40px; display: flex; flex-direction: column; gap: 22px; overflow: hidden; }
+  body { font: 400 13px/1.42 "DM Sans", sans-serif; font-kerning: normal; font-variant-ligatures: common-ligatures; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 816px; height: 1056px; margin: 0 auto; padding: 40px 48px 32px; display: flex; flex-direction: column; gap: 18px; overflow: hidden; }
   .serif { font-family: "Instrument Serif", serif; font-weight: 400; }
-  .label { font: 600 9.5px/1.3 "DM Sans", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--crimson); }
+  .label { font: 600 10.5px/1.3 "DM Sans", sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--crimson); }
   header { display: flex; align-items: center; gap: 18px; }
   .mono { width: 58px; height: 58px; flex: none; background: var(--crimson);
     -webkit-mask: url("../images/monogram.png") center / contain no-repeat; mask: url("../images/monogram.png") center / contain no-repeat; }
   header .name { flex: 1; }
   header h1 { font: 400 46px/1.1 "Instrument Serif", serif; }
   header .label { color: var(--peri); }
-  .contact { text-align: right; font-size: 10.5px; line-height: 1.6; }
+  .contact { text-align: right; font-size: 12.5px; line-height: 1.55; }
   .contact a { color: inherit; text-decoration: none; }
   hr { border: 0; border-top: 1px solid var(--crimson); }
-  .cols { display: grid; grid-template-columns: 208px 1fr; gap: 36px; align-items: start; }
-  .left, .right { display: grid; gap: 20px; }
-  .right { gap: 18px; }
-  .block { display: grid; gap: 7px; }
+  .cols { display: grid; grid-template-columns: 222px 1fr; gap: 32px; align-items: start; }
+  .left, .right { display: grid; gap: 18px; }
+  .right { gap: 15px; }
+  .block { display: grid; gap: 6px; }
   .muted { color: var(--muted); }
-  .org { color: var(--peri); font-weight: 500; font-size: 11px; }
-  .summary { font: italic 400 17px/1.25 "Instrument Serif", serif; }
+  .org { color: var(--peri); font-weight: 500; font-size: 12.5px; }
+  .summary { font: italic 400 18.5px/1.22 "Instrument Serif", serif; }
   .job { display: grid; gap: 3px; }
-  .job + .job { margin-top: 9px; }
+  .job + .job { margin-top: 8px; }
   .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  .top h3 { font: 400 17px/1.1 "Instrument Serif", serif; }
-  .top.small h3 { font-size: 15.5px; }
-  .when { font-size: 10.5px; color: var(--muted); white-space: nowrap; }
+  .top h3 { font: 400 19px/1.1 "Instrument Serif", serif; }
+  .top.small h3 { font-size: 17.5px; }
+  .when { font-size: 12px; color: var(--muted); white-space: nowrap; }
   p, li { text-wrap: pretty; }
-  .summary { text-indent: 0; }
-  ul { padding-left: 16px; margin-top: 3px; display: grid; gap: 2px; }
+  .summary { text-indent: 0; text-wrap: balance; }
+  ul { padding-left: 17px; margin-top: 2px; display: grid; gap: 1px; }
   .proj { display: grid; gap: 1px; }
-  .proj + .proj { margin-top: 5px; }
+  .proj + .proj { margin-top: 4px; }
   @media screen { body { background: #eee; padding: 24px 0; } .page { background: #fff; box-shadow: 0 8px 30px rgba(0,0,0,.12); } }
   @media screen and (max-width: 860px) { .page { width: 100%; height: auto; padding: 28px 20px; } .cols { grid-template-columns: 1fr; } header { flex-wrap: wrap; } .contact { text-align: left; } }
 </style>
@@ -64,8 +64,8 @@
   <div class="cols">
     <div class="left">
       <div class="block"><p class="label">Education</p>
-        <p style="font-size:12.5px;font-weight:500">Massachusetts College<br>of Art and Design</p>
-        <p class="muted">BFA, Communication Design<br>Minor, Business of Creative Industries<br>2023–2027</p></div>
+        <p style="font-size:14px;font-weight:500">Massachusetts College<br>of Art and Design</p>
+        <p class="muted">BFA, Communication Design<br>Minor in Business<br>of Creative Industries<br>2023–2027</p></div>
       <div class="block"><p class="label">Design</p>
         <p>Brand identity<br>Typography &amp; layout<br>Editorial design<br>UX/UI design<br>Motion &amp; prototyping<br>Print production<br>Large-format printing &amp; vinyl</p></div>
       <div class="block"><p class="label">Tools</p>
@@ -78,7 +78,7 @@
       <div class="block"><p class="label">Design Experience</p>
         <div class="job"><div class="top"><h3>Graphic Designer &amp; Manager</h3><span class="when">Summers 2024–2025</span></div>
           <p class="org">Gator Graphix · Laconia, NH</p>
-          <ul><li>Designed custom boat graphics, signs and banners for a wide range of local clients.</li>
+          <ul><li>Designed custom boat graphics, signs and banners for local clients.</li>
               <li>Met one on one with customers to turn their ideas into finished designs.</li>
               <li>Produced and installed graphics, and ran the print and vinyl equipment.</li></ul></div>
         <div class="job"><div class="top"><h3>Marketing &amp; Social Media Intern</h3><span class="when">Feb–Jun 2023</span></div>
@@ -90,15 +90,15 @@
       <div class="block"><p class="label">Selected Projects</p>
         <div class="proj"><div class="top small"><h3>Intertwine</h3><span class="when">2026</span></div><p>Designed and built an iPhone app and website that keep a couple’s wedding and guests in one place. Figma, SwiftUI, HTML/CSS.</p></div>
         <div class="proj"><div class="top small"><h3>VOWS</h3><span class="when">2026</span></div><p>Editorial magazine on nontraditional weddings, adapted into a website.</p></div>
-        <div class="proj"><div class="top small"><h3>The Bench Film Festival</h3><span class="when">2025</span></div><p>Brand identity, a 24-page program, poster and digital applications for a film festival.</p></div>
+        <div class="proj"><div class="top small"><h3>The Bench Film Festival</h3><span class="when">2025</span></div><p>Brand identity, a 24-page program, a poster and digital applications.</p></div>
       </div>
       <div class="block"><p class="label">Other Experience</p>
         <div class="job"><div class="top"><h3>Bank Services Representative</h3><span class="when">Summer 2026</span></div>
           <p class="org">Bank of New Hampshire · Laconia, NH</p>
-          <ul><li>Provided friendly, professional customer service in a fast-paced environment.</li></ul></div>
+          <ul><li>Gave friendly, professional customer service in a busy branch.</li></ul></div>
         <div class="job"><div class="top"><h3>Lab Monitor</h3><span class="when">2023–Present</span></div>
           <p class="org">MassArt Academic Technology Services · Boston, MA</p>
-          <ul><li>Give one-on-one support and keep equipment running for students and faculty.</li></ul></div>
+          <ul><li>Give one-on-one support and keep the labs’ equipment running.</li></ul></div>
       </div>
     </div>
   </div>
