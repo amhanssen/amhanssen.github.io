@@ -280,3 +280,6 @@ figure.top img { object-position: top; }
   .swatches { grid-template-columns: repeat(3, 1fr); }
 }
 .grid.cols-1 { max-width: 980px; }
+.phone-row.cols-3 { grid-template-columns: repeat(3, 1fr); } .phone-row.cols-5 { grid-template-columns: repeat(5, 1fr); }
+.phone-row figure { margin: 0; }
+@media (max-width: 860px) { .phone-row.cols-3, .phone-row.cols-5 { grid-template-columns: 1fr 1fr; } }
