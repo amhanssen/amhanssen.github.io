@@ -256,7 +256,7 @@ figure.top img { object-position: top; }
 /* Detailed case study blocks */
 .story-intro { margin-bottom: 28px; }
 .grid { display: grid; gap: 24px; align-items: start; }
-.grid.cols-1 { grid-template-columns: 1fr; } .grid.cols-2 { grid-template-columns: 1fr 1fr; } .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid.cols-1 { grid-template-columns: 1fr; } .grid.cols-2 { grid-template-columns: 1fr 1fr; } .grid.cols-3 { grid-template-columns: repeat(3, 1fr); } .grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
 .grid figure, .ba figure { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--paper); }
 .grid figure img, .ba figure img { width: 100%; height: 100%; object-fit: cover; }
 .grid figure.fit img, .ba figure.fit img { object-fit: contain; }
@@ -283,3 +283,4 @@ figure.top img { object-position: top; }
 .phone-row.cols-3 { grid-template-columns: repeat(3, 1fr); } .phone-row.cols-5 { grid-template-columns: repeat(5, 1fr); }
 .phone-row figure { margin: 0; }
 @media (max-width: 860px) { .phone-row.cols-3, .phone-row.cols-5 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 860px) { .grid.cols-5 { grid-template-columns: 1fr 1fr; gap: 16px; } }

@@ -29,7 +29,8 @@ Read this first. It sums up everything done so far, so a new chat can pick up wi
 
 ## Projects (Home order)
 Featured: **Intertwine** (marked *In progress*). Then DreamCast, VOWS, The Bench Film Festival, Paws & Pastries, Splash Zone, Gator Graphix. Plus a Personal page (posters, sneakers, characters).
-- **Hidden** (`"hidden": True` in build.py): **Droplet** and **Music Box**. Waiting for her images and text. Figma has fill-in pages for both.
+- **Droplet** added Oct 21, 2026 (after DreamCast). Still [check module] and [add design apps] in its facts; reflection drafted by Claude.
+- **Hidden** (`"hidden": True` in build.py): **Music Box**. Waiting for her images and text.
 - Verified facts: Bench fonts Social Gothic + Paralucent, Pantones 533/468/3546/4975/7544 C. VOWS fonts Elido (sans, wordmark/headlines) + Odile (serif), palette wine/butter/cream/gold/plum, 8 × 9.5 in. Paws fonts Decoy + Almarai. Intertwine fonts Elido (headings) + SF Pro (UI); the guest website uses Alegreya Sans only as a stand-in.
 
 ## Still open (ask her)
