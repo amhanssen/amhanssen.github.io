@@ -247,3 +247,8 @@ footer .display-xl { font-size: clamp(44px, 6.2vw, 92px); }
 
 /* The VOWS cover image has a thin dark line on its left edge; crop it out. */
 .cover img[src$="vows/cover.jpg"] { transform: scale(1.04); }
+
+/* Videos and top-aligned web page screenshots */
+.video { margin: 0; display: grid; gap: 12px; }
+.video video { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); background: #000; display: block; }
+figure.top img { object-position: top; }

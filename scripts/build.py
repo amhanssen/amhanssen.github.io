@@ -59,7 +59,8 @@ PROJECTS = [
         ("Week 6", "First video", "Bedtime flow: notification, story, dreaming, morning log."),
         ("Week 7", "Polish", "Pacing, color and readability, checked against Flora's goals.")]},
     "outcome": {"quote": "“Refining ideas through research and iteration made something more focused and meaningful.”",
-                "body": "The final pieces were a polished interface and a video of the full bedtime flow. The biggest lesson: balancing creativity with simplicity, on a deadline."},
+                "body": "The final pieces were a polished interface and a video of the full bedtime flow. The biggest lesson: balancing creativity with simplicity, on a deadline.",
+                "video": {"src": "videos/dreamcast.mp4", "poster": "images/dreamcast/video-poster.jpg", "caption": "The final DreamCast video: the full bedtime flow, from notification to morning log. 1 min 12 s."}},
   },
   {
     "slug": "droplet", "title": "Droplet", "year": "", "hidden": True,
@@ -82,7 +83,12 @@ PROJECTS = [
     "feature": {"title": "Print first, then screen", "label": "Two formats", "ratio": "628/460", "cards": [
         {"k": "Print", "t": "An 8 × 9.5 in magazine", "d": "Cover, spine, front matter, features, an interview, a visual essay and departments, printed and bound by hand.",
          "img": img("images/vows/spread.jpg", "Rainy Days Aren't Bad Luck spread", fit=True, bg="paper")},
-        {"k": "Web", "t": "An interactive website", "d": "Seven pages with scroll-paced storytelling, full-bleed images, oversized pull quotes and a lace motif."}]},
+        {"k": "Web", "t": "An interactive website", "d": "Seven pages with scroll-paced storytelling, full-bleed images, oversized pull quotes and a lace motif.",
+         "img": img("images/vows/web/home.jpg", "VOWS website home page", bg="paper")}]},
+    "gallery": {"title": "Inside the website", "label": "Web pages", "images": [
+        img("images/vows/web/issue.jpg", "VOWS issue landing page", ratio="410/560"),
+        img("images/vows/web/feature.jpg", "VOWS feature article page", ratio="410/560"),
+        img("images/vows/web/visual-essay.jpg", "VOWS visual essay page", ratio="410/560")]},
     "process": {"title": "Ten weeks, two formats.", "steps": [
         ("Week 1", "Direction", "Theme, audience, keywords and a flexible grid."),
         ("Week 2", "Type", "Type galleys comparing headlines, body text and captions."),
@@ -118,10 +124,11 @@ PROJECTS = [
         ("Weeks 3–4", "Refine", "Optical scaling for three logos and 10 program sketches."),
         ("Week 5", "Rediscovery", "A conceptual reset toward judgment and truth."),
         ("Week 6", "Synthesis", "Grid, gavel borders and a scale icon across every touchpoint.")],
-        "images": [img("images/bench/program.jpg", "Program cover", fit=True, bg="apricot", ratio="628/480"),
-                   img("images/bench/newspaper.jpg", "Newspaper ad: Take your seat at the bench", fit=True, bg="apricot", ratio="628/480")]},
+        "images": [img("images/bench/program-sketches.gif", "Animation flipping through program layout sketches", fit=True, bg="apricot", ratio="628/480"),
+                   img("images/bench/program.jpg", "Final program cover", fit=True, bg="apricot", ratio="628/480")]},
     "outcome": {"quote": "“Beyond the headlines, just seeking truth through cinema.”",
                 "body": "The final pieces: a 24-page program designed like a formal judicial dossier, a large brand poster, tickets and a set of digital applications.",
+                "video": {"src": "videos/bench-breathing.mp4", "poster": "images/bench/breathing-poster.jpg", "caption": "“Breathe in”: a calming motion piece built from the gavel pattern, for screens at the festival. 1 min."},
                 "images": [img("images/bench/tickets.jpg", "Festival tickets", ratio="628/500"),
                            img("images/bench/bus-shelter.jpg", "Posters in a bus shelter", ratio="628/500")]},
   },
@@ -138,7 +145,7 @@ PROJECTS = [
     "idea": ("The idea", "Start with food memories, end with a bone.",
              "Mind maps around food memories led to a brand trueline, customer and employee personas and two moodboards. From there, the name and a warm, playful direction took shape."),
     "feature": {"title": "From 100 marks to one", "label": "Logo process", "ratio": "410/340", "cards": [
-        {"k": "Week 2", "t": "100 sketches", "d": "Literal, metaphoric, wordmarks and experimental shapes, to move past first ideas.", "img": img("images/paws/sketches.jpg", "Early logo sketch", fit=True, bg="paper")},
+        {"k": "Weeks 2–3", "t": "100 sketches, 10 refined", "d": "From 100 quick marks to the ten strongest, redrawn in Illustrator.", "img": img("images/paws/refined-logos.gif", "Animation cycling through the ten refined Paws & Pastries logos", fit=True, bg="paper")},
         {"k": "Week 4", "t": "Dual lockup", "d": "One final mark in horizontal and stacked versions, tested in positive and negative.", "img": img("images/paws/lockup.jpg", "Round logo lockup", fit=True, bg="paper")},
         {"k": "Week 5", "t": "Two menus", "d": "A type system and patterns drawn from the logo's shapes, set in black and white first.", "img": img("images/paws/menu.jpg", "Pup treats menu", fit=True, bg="paper")}]},
     "process": {"title": "Seven weeks, from memory to menu.", "steps": [
@@ -414,10 +421,14 @@ def page_case(p):
     for c in f["cards"]:
         if c.get("img"):
             im = dict(c["img"], ratio=f.get("ratio", "410/360"))
-            html += f'<div class="card">{figure(im, r)}<p class="label accent">{escape(c["k"])}</p><h3 class="heading-s">{escape(c["t"])}</h3><p class="muted">{escape(c["d"])}</p></div>'
+            html += f'<div class="card">{figure(im, r, "top" if "/web/" in im["src"] else "")}<p class="label accent">{escape(c["k"])}</p><h3 class="heading-s">{escape(c["t"])}</h3><p class="muted">{escape(c["d"])}</p></div>'
         else:
             html += f'<div class="card text{" hi" if c.get("hi") else ""}"><p class="label accent">{escape(c["k"])}</p><h3 class="heading-s">{escape(c["t"])}</h3><p class="muted">{escape(c["d"])}</p></div>'
     html += "</div></section>\n"
+    g = p.get("gallery")
+    if g:
+        html += f'<section class="wrap"><div class="section-head"><h2 class="heading-m">{escape(g["title"])}</h2><span class="label muted">{escape(g["label"])}</span></div><div class="media">'
+        html += "".join(figure(i, r, "top") for i in g["images"]) + "</div></section>\n"
     pr = p["process"]
     html += f'<section class="process"><div class="wrap"><p class="label muted">Process</p><h2 class="display-l">{escape(pr["title"])}</h2><div class="steps">'
     html += "".join(f'<div><p class="label accent">{w}</p><h3 class="heading-s">{escape(t)}</h3><p class="body-s muted">{escape(d)}</p></div>' for w, t, d in pr["steps"])
@@ -427,6 +438,10 @@ def page_case(p):
     html += "</div></section>\n"
     o = p["outcome"]
     html += f'<section class="outcome"><div class="wrap"><p class="label muted">Outcome</p><p class="display-l quote">{escape(o["quote"])}</p><p class="body-l measure">{escape(o["body"])}</p>'
+    if o.get("video"):
+        v = o["video"]
+        html += f'<figure class="video"><video controls playsinline preload="none" poster="{r}{v["poster"]}"><source src="{r}{v["src"]}" type="video/mp4">Your browser can’t play this video.</video>'
+        html += f'<figcaption class="body-s muted">{escape(v["caption"])}</figcaption></figure>'
     if o.get("images"):
         html += '<div class="media">' + "".join(figure(i, r) for i in o["images"]) + "</div>"
     html += "</div></section>\n"
