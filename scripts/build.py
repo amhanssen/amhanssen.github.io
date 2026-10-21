@@ -35,7 +35,7 @@ PROJECTS = [
     "facts": [("My role", "Personas, user stories, wireframes, journey map, storyboards, interface and video"),
               ("Timeline", "7 weeks · Fall 2025"), ("Course", "Information Architecture, with Martha Rettig"),
               ("Tools", "Figma, After Effects, Google Suite")],
-    "hero": [img("images/dreamcast/cover.jpg", "DreamCast notification on an iPhone", fit=True, bg="ink", ratio="1280/760")],
+    "hero": [img("images/dreamcast/cover.jpg", "DreamCast notification on an iPhone", fit=True, bg="ink", ratio="1280/620")],
     "idea": ("The idea", "What if your sleep app helped you remember your dreams, too?",
              "Headspace already helps people wind down. DreamCast adds a bedtime story that eases you to sleep and a gentle morning log, so you can capture a dream before it fades and get suggestions based on what you remember."),
     "feature": {"title": "Two personas, one happy path", "label": "Who it's for", "cards": [
@@ -74,8 +74,8 @@ PROJECTS = [
     "facts": [("My role", "Editorial design, typography, layout and web design"), ("Timeline", "10 weeks · Spring 2026"),
               ("Course", "Typography III & Information Architecture, with Katherine Hughes & Rita Ferreira"),
               ("Tools", "Figma, InDesign, Illustrator, Photoshop")],
-    "hero": [img("images/vows/front-cover.jpg", "VOWS front cover", fit=True, bg="paper", ratio="628/760"),
-             img("images/vows/back-cover.jpg", "VOWS back cover", fit=True, bg="paper", ratio="628/760")],
+    "hero": [img("images/vows/front-cover.jpg", "VOWS front cover", fit=True, bg="paper", ratio="628/620"),
+             img("images/vows/back-cover.jpg", "VOWS back cover", fit=True, bg="paper", ratio="628/620")],
     "idea": ("The idea", "Bridal magazines sell one idea of a perfect wedding. VOWS shows the rest.",
              "Five keywords guided every choice: nontraditional, editorial, bold, playful and expressive. Instead of luxury and perfection, the stories cover real couples, real budgets and real-life celebrations."),
     "feature": {"title": "Print first, then screen", "label": "Two formats", "ratio": "628/460", "cards": [
@@ -104,7 +104,7 @@ PROJECTS = [
     "intro": "An identity for a new film festival of true crime, documentary and psychological drama, designed as a study of judgment and truth.",
     "facts": [("My role", "Festival concept, identity, 24-page program, poster and digital applications"), ("Timeline", "6 weeks · Fall 2025"),
               ("Course", "Graphic Design 2: Making Meaning, with Joe Quackenbush"), ("Tools", "Figma, Illustrator, Adobe Suite")],
-    "hero": [img("images/bench/applications.jpg", "The Bench brand applications title card", fit=True, bg="ink", ratio="1280/760")],
+    "hero": [img("images/bench/applications.jpg", "The Bench brand applications title card", fit=True, bg="ink", ratio="1280/620")],
     "idea": ("The idea", "Go beyond the sensationalism of true crime.",
              "The festival asks why we're drawn to stories of investigation and morality. A visual thesis set the direction, a 15-film lineup was curated for three Boston venues, and every piece invites viewers to become active participants, not passive watchers."),
     "feature": {"title": "From noir to the courtroom", "label": "How the identity changed", "ratio": "410/360", "cards": [
@@ -133,7 +133,7 @@ PROJECTS = [
     "intro": "A brand for a dog-friendly café with treats for people and pups: name, logo, menus and a 24 × 36 in poster.",
     "facts": [("My role", "Brand strategy, logo, type system, menus and poster"), ("Timeline", "7 weeks · Fall 2025"),
               ("Course", "Graphic Design 2: Making Meaning, with Joe Quackenbush"), ("Tools", "Figma, Illustrator, Adobe Suite")],
-    "hero": [img("images/paws/mark.jpg", "Paws & Pastries brand mark", ratio="1280/760")],
+    "hero": [img("images/paws/mark.jpg", "Paws & Pastries brand mark", ratio="1280/620")],
     "idea": ("The idea", "Start with food memories, end with a bone.",
              "Mind maps around food memories led to a brand trueline, customer and employee personas and two moodboards. From there, the name and a warm, playful direction took shape."),
     "feature": {"title": "From 100 marks to one", "label": "Logo process", "ratio": "410/340", "cards": [
@@ -160,7 +160,7 @@ PROJECTS = [
     "intro": "Vinyl type in a campus bathroom that turns an everyday room into a playful, slightly uncomfortable experience.",
     "facts": [("My role", "Team project: concept, mockups and installation"), ("Timeline", "4 weeks · Spring 2026"),
               ("Course", "Typography III, with Katherine Hughes"), ("Tools", "Figma, Illustrator, Photoshop, Procreate")],
-    "hero": [img("images/splash/install.jpg", "Splash Zone installation", ratio="1280/760")],
+    "hero": [img("images/splash/install.jpg", "Splash Zone installation", ratio="1280/620")],
     "idea": ("The idea", "What happens to type when you can walk into it?",
              "Our team walked around campus looking for places with a strong mood or an interesting way people use them. The bathroom won: an everyday, private space where letters splashing across the tiles feel funny and a little too close."),
     "feature": {"title": "Three concepts, one pick", "label": "Week 1", "cards": [
@@ -188,8 +188,8 @@ PROJECTS = [
     "intro": "Two summers as graphic designer and manager at a sign shop in Laconia, New Hampshire, making custom boat graphics, signs and banners for local businesses and boat owners.",
     "facts": [("My role", "Graphic designer & manager"), ("Timeline", "Summers 2024–2025"),
               ("Where", "Gator Graphix · Laconia, NH"), ("Tools", "Adobe Illustrator, print and vinyl equipment")],
-    "hero": [img("images/gator/install2.jpg", "Twin Engines boat lettering", ratio="628/760"),
-             img("images/gator/install3.jpg", "Gracie-Mae transom graphics", ratio="628/760")],
+    "hero": [img("images/gator/install2.jpg", "Twin Engines boat lettering", ratio="628/620"),
+             img("images/gator/install3.jpg", "Gracie-Mae transom graphics", ratio="628/620")],
     "idea": ("The job", "Real clients, real boats, real deadlines.",
              "Every job started with a conversation. I met one on one with customers to turn their ideas into designs, then produced and installed them, from boat names to business signs and banners."),
     "feature": {"title": "Boat graphics", "label": "On the water", "ratio": "410/440", "cards": [
@@ -250,7 +250,7 @@ def nav(r, current=""):
         cur = ' aria-current="page"' if key == current else ""
         return f'<li><a href="{r}{href}"{cur}>{label}</a></li>'
     return f"""<header class="wrap nav">
-  <a class="brand" href="{r}index.html" aria-label="Amanda Hanssen, home"><span class="monogram" aria-hidden="true"></span><span class="brand-name">Amanda Hanssen</span></a>
+  <a class="brand" href="{r}index.html" aria-label="Amanda Hanssen, home"><span class="monogram" aria-hidden="true"></span></a>
   <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
   <ul class="nav-links" id="menu">
     {a("index.html#work", "Work", "work")}
@@ -320,7 +320,7 @@ def page_home():
 </section></div>
 <section class="wrap">
   <a class="featured" href="work/{feat['slug']}.html" style="text-decoration:none">
-    {cover(feat, r).replace('class="cover', 'style="aspect-ratio:760/560" class="cover', 1)}
+    {cover(feat, r).replace('class="cover', 'style="aspect-ratio:760/480" class="cover', 1)}
     <div class="text">
       <span class="badge label">Featured case study</span>
       <h2 class="display-l">{feat['title']}</h2>
@@ -336,42 +336,36 @@ def page_home():
 """
     for n, p in enumerate(rows, 1):
         html += f"""    <a class="row" href="work/{p['slug']}.html">
-      <div class="row-text">
-        <span class="label accent">{n:02d}</span>
-        <h3 class="display-l">{escape(p['title'])}</h3>
-        <p class="body-s muted">{p['tags']} · {p['year']}</p>
-        <p>{escape(p['summary'])}</p>
-        <span class="link">View project&nbsp; →</span>
-      </div>
       {cover(p, r)}
+      <div class="row-text">
+        <p class="label"><span class="accent">{n:02d}</span>&nbsp;&nbsp;<span class="muted">{p['tags']} · {p['year']}</span></p>
+        <h3 class="heading-m">{escape(p['title'])}</h3>
+        <p class="row-summary">{escape(p['summary'])}</p>
+      </div>
+      <span class="row-arrow" aria-hidden="true">→</span>
     </a>
 """
     html += f"""  </div>
   <a class="text-row" href="personal.html"><span class="heading-s">Personal work</span><span class="muted" style="font-weight:500">Posters, sneakers and illustrations&nbsp; →</span></a>
 </section>
-<section class="dark" style="margin-bottom:0">
-  <div class="wrap">
-    <div class="dark-head"><p class="display-l" style="max-width:860px">I like projects where a brand, a screen and a real place all tell the same story.</p><p class="label light">What I do</p></div>
+<section class="wrap">
+  <a class="about-strip" href="about.html">
+    <div class="photo"><img src="images/me.jpg" alt="Amanda Hanssen" loading="lazy"></div>
+    <div><h2 class="heading-m">Hi, I'm Amanda.</h2><p class="muted">Communication Design student at MassArt, between Boston and Laconia, NH.</p></div>
+    <span class="link">More about me&nbsp; →</span>
+  </a>
+</section>
+"""
+    return html + footer(r)
+
+
+CAPS = """<div class="dark-head"><p class="display-l" style="max-width:860px">I like projects where a brand, a screen and a real place all tell the same story.</p><p class="label light">What I do</p></div>
     <div class="caps">
       <div><span class="label light">01</span><h3 class="heading-s">Brand identity</h3><p class="body-s">Logos, type systems and print, like Paws &amp; Pastries and The Bench.</p></div>
       <div><span class="label light">02</span><h3 class="heading-s">Editorial &amp; type</h3><p class="body-s">Magazines, layouts and type you can walk into, like VOWS and Splash Zone.</p></div>
       <div><span class="label light">03</span><h3 class="heading-s">UX/UI &amp; apps</h3><p class="body-s">Research, flows and working apps, like DreamCast and Intertwine.</p></div>
       <div><span class="label light">04</span><h3 class="heading-s">Print &amp; production</h3><p class="body-s">Signs, vinyl and printed pieces, like Gator Graphix and VOWS.</p></div>
-    </div>
-    <p class="body-s tools">Tools: Figma · Illustrator · InDesign · Photoshop · After Effects · Procreate</p>
-  </div>
-</section>
-<section class="wrap about-teaser">
-  <div class="photo" style="aspect-ratio:1/1"><img src="images/me.jpg" alt="Amanda Hanssen" loading="lazy"></div>
-  <div class="stack">
-    <p class="label muted">About</p>
-    <h2 class="display-l">Hi, I'm Amanda.</h2>
-    <p class="body-l" style="max-width:620px">I'm a Communication Design student at MassArt, splitting my time between Boston and Laconia, NH. I care about small, everyday moments: a menu, a sign on a lake, a poster on a wall. I sketch in Procreate, build in Figma and bring things to life in After Effects.</p>
-    <a class="link" href="about.html">More about me&nbsp; →</a>
-  </div>
-</section>
-"""
-    return html + footer(r)
+    </div>"""
 
 
 def facts_html(facts):
@@ -392,7 +386,7 @@ def next_html(p, r):
 def case_top(p, r):
     html = head(p["title"], p["intro"], r, image=(p["cover"]["src"] if p.get("cover") else "images/intertwine/site-desktop.jpg"), path=f"work/{p['slug']}.html")
     html += f'<div class="sky" id="top">{nav(r, "work")}'
-    html += f"""<section class="wrap cs-hero" style="padding-bottom:64px">
+    html += f"""<section class="wrap cs-hero">
   <a class="back" href="{r}index.html#work">←&nbsp; All work</a>
   <p class="label accent">{p['eyebrow']}</p>
   <h1 class="display-xl">{escape(p['title'])}</h1>
@@ -571,7 +565,8 @@ def page_about():
   </ul></div>
 </section>
 <section class="dark" style="margin-bottom:0"><div class="wrap">
-  <p class="label light">Skills &amp; tools</p>
+  """ + CAPS + """
+  <p class="label light" style="margin-top:64px">Skills &amp; tools</p>
   <ul class="chips">""" + "".join(f"<li>{escape(s)}</li>" for s in [
         "Brand identity", "Editorial layout", "Typography", "UX/UI", "Wireframing", "User research", "Personas & journey maps",
         "Storyboarding", "Motion", "AR concepts", "Figma", "Illustrator", "InDesign", "Photoshop", "After Effects", "Procreate",
