@@ -66,7 +66,7 @@ PROJECTS = [
        "intro": "Calm, warm and trustworthy: wedding planning is stressful, so the interface stays quiet. Colors and spacing live as tokens shared by Figma, the app and the website, so all three always match.",
        "colors": [("Canvas", "#FCF5E5", "Background"), ("Slate", "#3F5562", "Accent and buttons"), ("Ink", "#202B31", "Text"),
                   ("Sage", "#E3ECE2", "Success: RSVP yes"), ("Clay", "#9E3A3A", "Errors")],
-       "type_faces": [("Headings", "Alegreya Sans", "A friendly humanist sans with a little elegance, for titles and the website."),
+       "type_faces": [("Headings", "Elido", "A warm, characterful sans with a touch of romance, for screen titles and the wedding’s big moments."),
                       ("Interface", "SF Pro", "Apple’s system font for body text and controls, so the app feels at home on iPhone.")],
        "images": [img("images/intertwine/components.jpg", "Component library", fit=True, bg="paper", ratio="1812/1200", cap="The component library: buttons, fields, badges, cards, tabs and flow parts, each with light and dark versions.")]},
       {"type": "steps", "heading": "From site map to a working app.", "steps": [
@@ -801,7 +801,7 @@ def page_intertwine(p):
   <div class="steps">
     <div><p class="label accent">Step 1</p><h3 class="heading-s">Research</h3><p class="body-s muted">How couples and guests share wedding info today.</p></div>
     <div><p class="label accent">Step 2</p><h3 class="heading-s">Site map</h3><p class="body-s muted">Every screen for both the couple and the guest.</p></div>
-    <div><p class="label accent">Step 3</p><h3 class="heading-s">Brand pass</h3><p class="body-s muted">A script monogram, warm neutrals and Alegreya Sans headings.</p></div>
+    <div><p class="label accent">Step 3</p><h3 class="heading-s">Brand pass</h3><p class="body-s muted">A script monogram, warm neutrals and Elido headings.</p></div>
     <div><p class="label accent">Step 4</p><h3 class="heading-s">Build</h3><p class="body-s muted">A SwiftUI iPhone app and a guest website, connected by Supabase.</p></div>
     <div><p class="label accent">Step 5</p><h3 class="heading-s">Test</h3><p class="body-s muted">A real wedding, real invites and RSVPs, then fix what broke.</p></div>
   </div>
