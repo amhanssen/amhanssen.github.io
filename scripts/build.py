@@ -28,12 +28,12 @@ def img(src, alt, fit=False, bg=None, ratio=None, cap=None):
 PROJECTS = [
   {
     "slug": "intertwine", "title": "Intertwine", "year": "2026", "featured": True,
-    "tags": "iOS app · Website · Brand",
-    "summary": "One wedding, in one place: an iPhone app where couples plan events, guests and a registry, and a website where every guest RSVPs with a personal link. Designed and built from research to working code.",
+    "tags": "iOS app · Website · Brand · In progress",
+    "summary": "One wedding, in one place: an iPhone app where couples plan events, guests and a registry, and a website where every guest RSVPs with a personal link. A work in progress, designed and built from research to working code.",
     "cover_phones": ["images/intertwine/o7-home.jpg", "images/intertwine/gh1-guesthome.jpg"],
-    "eyebrow": "Case study · iOS app & website · 2026",
+    "eyebrow": "Case study · In progress · iOS app & website · 2026",
     "intro": "One wedding, in one place. An iPhone app where couples plan events, guests and a registry, and a website where each guest opens a personal invite link: no app or account needed.",
-    "facts": [("My role", "Solo: research, UX/UI, brand, and building the app and website"), ("Timeline", "Fall 2026"),
+    "facts": [("My role", "Solo: research, UX/UI, brand, and building the app and website"), ("Status", "In progress · Fall 2026"),
               ("Course", "Everyday Enhancements, Module 3 · MassArt"), ("Tools", "Figma, SwiftUI, HTML/CSS/JS, Supabase")],
     "story": [
       {"type": "phonepanel", "images": [img("images/intertwine/o1-welcome.jpg", "Intertwine welcome screen"), img("images/intertwine/o7-home.jpg", "Couple home screen"), img("images/intertwine/gh1-guesthome.jpg", "Guest home screen")]},
@@ -74,11 +74,11 @@ PROJECTS = [
         ("Step 2", "Site map", "Every screen for both the couple and the guest."),
         ("Step 3", "Brand pass", "A script monogram, warm neutrals, tokens and components."),
         ("Step 4", "Build", "A SwiftUI iPhone app and a guest website, connected by Supabase."),
-        ("Step 5", "Test", "A real wedding, real invites and RSVPs, then fix what broke.")]},
-      {"type": "reflection", "quote": "“One wedding, in one place.”", "points": [
-        ("What worked", "Designing both sides at once. Seeing the couple’s screen next to the guest’s made every feature, like RSVPs and the registry, connect end to end."),
-        ("What I learned", "Building it myself changed how I design: shared tokens and components saved hours and kept Figma and code in sync."),
-        ("Next time", "I’d test with real couples earlier, and add push notifications so new RSVPs and questions reach the couple right away.")]},
+        ("Now", "Test", "Testing with a real wedding, real invites and RSVPs, and fixing what breaks.")]},
+      {"type": "reflection", "label": "Where it stands", "quote": "Still in progress: one wedding, in one place.", "points": [
+        ("Working so far", "Designing both sides at once. Seeing the couple’s screen next to the guest’s made every feature, like RSVPs and the registry, connect end to end."),
+        ("What I’m learning", "Building it myself changes how I design: shared tokens and components save hours and keep Figma and code in sync."),
+        ("Next steps", "Finish testing with a real couple, show photos added on other phones, and add push notifications for new RSVPs and questions.")]},
     ],
   },
   {
@@ -561,7 +561,7 @@ def page_home():
   <a class="featured" href="work/{feat['slug']}.html" style="text-decoration:none">
     {cover(feat, r).replace('class="cover', 'style="aspect-ratio:760/480" class="cover', 1)}
     <div class="text">
-      <span class="badge label">Featured case study</span>
+      <span class="badge label">Featured · In progress</span>
       <h2 class="display-l">{feat['title']}</h2>
       <p>{escape(feat['summary'])}</p>
       <p class="body-s muted">{feat['tags']} · {feat['year']}</p>
@@ -879,7 +879,7 @@ def page_about():
     <li><span class="heading-s">Graphic Design 2: Making Meaning</span><span class="body-s muted">Fall 2025 · Paws &amp; Pastries, The Bench</span></li>
     <li><span class="heading-s">Information Architecture</span><span class="body-s muted">DreamCast</span></li>
     <li><span class="heading-s">Typography III</span><span class="body-s muted">Spring 2026 · VOWS, Splash Zone</span></li>
-    <li><span class="heading-s">Everyday Enhancements</span><span class="body-s muted">Fall 2026 · Intertwine</span></li>
+    <li><span class="heading-s">Everyday Enhancements</span><span class="body-s muted">Fall 2026 · Intertwine (in progress)</span></li>
   </ul></div>
   <div><h2 class="label muted">Experience</h2><ul>
     <li><span class="heading-s">Graphic Designer &amp; Manager</span><span class="body-s muted">Gator Graphix · Laconia, NH · 2024–2025. Custom boat graphics, signs and banners for a wide range of clients.</span></li>
