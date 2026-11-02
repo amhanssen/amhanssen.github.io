@@ -7,7 +7,7 @@ Read this first. It sums up everything done so far, so a new chat can pick up wi
 - Designs in Figma; new to code and Git. Explain in short, plain steps with exact button names.
 - Publishes with **GitHub Desktop → Push origin** (the terminal is not signed in to GitHub). Ask before pushing or publishing. Check "Current Repository" says **amhanssen.github.io** first (she also has an Intertwine repo).
 - **Career focus: branding and UI/UX** (web design too). She enjoyed physical/print work (Gator Graphix) but it's her past, not her direction. Frame copy toward branding and UI/UX.
-- **About page intro paragraph** is personal, not a job summary (job details belong in Experience). Current text (Nov 2, 2026): "I've always loved making things people can see and touch, from signs to printed pieces. Now I'm focused on branding and UI/UX: shaping how a brand looks, and how people use it on screen." Don't claim she did installs at Gator unless she confirms.
+- **About page intro paragraph** is personal, not a job summary (job details belong in Experience). Resume summary also leads with branding and UI/UX. Current About text (Nov 2, 2026): "I've always loved making things people can see and touch, from signs to printed pieces. Now I'm focused on branding and UI/UX: shaping how a brand looks, and how people use it on screen." Don't claim she did installs at Gator unless she confirms.
 - Wants to save credits: keep answers short, batch changes, avoid extra screenshots and re-checks unless something looks off.
 
 ## Where things live
