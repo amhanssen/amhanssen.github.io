@@ -88,9 +88,10 @@ em.accent, .italic { font-style: italic; }
 .hero { padding-top: clamp(28px, 5vw, 72px); padding-bottom: clamp(36px, 5vw, 72px); display: grid; gap: clamp(16px, 2.6vw, 40px); }
 .eyebrow { display: flex; align-items: center; gap: 12px; }
 .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--periwinkle-deep); }
-.hero-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
-.hero-row .body-l { max-width: 600px; }
-.latest { border-left: 2px solid var(--line); padding-left: 24px; max-width: 340px; display: grid; gap: 10px; }
+.hero-row { display: grid; grid-template-columns: minmax(0, 620px) minmax(0, 320px); justify-content: space-between; align-items: start; gap: 24px 48px; }
+.latest { border-left: 2px solid var(--line); padding-left: 24px; display: grid; gap: 8px; }
+.latest p:last-child { font-size: 17px; line-height: 1.5; }
+@media (max-width: 760px) { .hero-row { grid-template-columns: 1fr; } }
 
 /* ---------- Sections ---------- */
 section { padding-bottom: clamp(48px, 6vw, 88px); }
