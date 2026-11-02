@@ -11,7 +11,7 @@
   --periwinkle-deep: #4F5B9A;
   --line: #EED3B4;
   --on-dark: #FFEDD5;
-  --sky: linear-gradient(180deg, #B5BEDD 0%, #E6DCDD 55%, #FFEDD5 100%);
+  --sky: var(--apricot);   /* top of each page: solid, no gradient */
 
   --serif: "Instrument Serif", Georgia, serif;
   --sans: "DM Sans", system-ui, -apple-system, sans-serif;
@@ -135,7 +135,7 @@ section { padding-bottom: clamp(48px, 6vw, 88px); }
 .about-strip { display: grid; grid-template-columns: 96px 1fr auto; gap: 28px; align-items: center; padding: 28px 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); text-decoration: none; }
 .about-strip .photo { aspect-ratio: 1 / 1; border-radius: 50%; }
 .about-strip:hover .link { opacity: .7; }
-.photo { border-radius: var(--radius); overflow: hidden; background: var(--sky); }
+.photo { border-radius: var(--radius); overflow: hidden; background: var(--paper); }
 .photo img { width: 100%; height: 100%; object-fit: cover; }
 .stack { display: grid; gap: 24px; justify-items: start; }
 
