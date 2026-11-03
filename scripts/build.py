@@ -66,7 +66,7 @@ PROJECTS = [
        "intro": "Calm, warm and trustworthy: wedding planning is stressful, so the interface stays quiet. Colors and spacing live as tokens shared by Figma, the app and the website, so all three always match.",
        "colors": [("Canvas", "#FCF5E5", "Background"), ("Slate", "#3F5562", "Accent and buttons"), ("Ink", "#202B31", "Text"),
                   ("Sage", "#E3ECE2", "Success: RSVP yes"), ("Clay", "#9E3A3A", "Errors")],
-       "type_faces": [("Headings", "Elido", "A warm, characterful sans with a touch of romance, for screen titles and the wedding’s big moments."),
+       "type_faces": [("Headings", "Elido", "The brand heading font, warm with a touch of romance. Until it’s licensed for the app and web, the app uses the system font and the website uses Alegreya Sans as stand-ins."),
                       ("Interface", "SF Pro", "Apple’s system font for body text and controls, so the app feels at home on iPhone.")],
        "images": [img("images/intertwine/components.jpg", "Component library", fit=True, bg="paper", ratio="1280/2000", maxw="760px", cap="The component library: buttons, fields, badges, cards, tabs and flow parts, all built on the shared color and spacing tokens.")]},
       {"type": "steps", "heading": "From site map to a working app.", "steps": [
@@ -82,7 +82,7 @@ PROJECTS = [
     ],
   },
   {
-    "slug": "dreamcast", "title": "DreamCast", "year": "2025",
+    "slug": "dreamcast", "note": "A student concept, not affiliated with Headspace.", "title": "DreamCast", "year": "2025",
     "tags": "App concept · UX/UI · Motion",
     "summary": "A Headspace feature that helps you fall asleep and remember your dreams. Personas, journey maps, storyboards, the interface and a motion video, made over seven weeks.",
     "cover": img("images/dreamcast/cover.jpg", "DreamCast on an iPhone lock screen", fit=True, bg="ink"),
@@ -95,7 +95,7 @@ PROJECTS = [
     "story": [
       {"type": "split", "label": "The brief", "heading": "Design a new feature for an app people already use.",
        "body": ["My partner and I started by exploring apps to build a feature for. We landed on dreams: an app that could help people fall asleep and remember their dreams more easily. I’ve always been fascinated by dreams, and I’ve even practiced lucid dreaming, so I loved the idea right away.",
-                "Our first pitch mixed Kindle with dream tracking. I’d never really used Kindle, so I made my own version inside Headspace, which already helps people with mindfulness and sleep. That became DreamCast."]},
+                "Our first pitch mixed Kindle with dream tracking. I chose to build it inside Headspace instead, because it already helps people with mindfulness and sleep, so a dream feature fits there naturally. That became DreamCast."]},
       {"type": "images", "title": "Who it’s for", "label": "Week 3", "cols": 2,
        "intro": "Two personas kept me honest: one realistic, one from the dream world. They helped me think about how DreamCast could serve everyday users and still feel imaginative.",
        "images": [img("images/dreamcast/persona-flora.jpg", "Persona: Flora Miller", ratio="16/9", cap="Flora Miller, 21, a college student balancing school stress and sleep. She wants to sleep better and use her dreams as a creative outlet."),
@@ -129,7 +129,7 @@ PROJECTS = [
       {"type": "video", "title": "The final video", "label": "Motion",
        "src": "videos/dreamcast.mp4", "poster": "images/dreamcast/video-poster.jpg",
        "cap": "The full bedtime flow as an ad, from notification to morning log. 1 min 12 s."},
-      {"type": "reflection", "quote": "“I learned how important it is to balance creativity with simplicity.”", "points": [
+      {"type": "reflection", "quote": "“Once every feature had to support Flora’s night, the app felt calmer.”", "points": [
         ("What worked", "Focusing on Flora. Once every feature had to support her night, the happy path got simpler and the app felt calmer."),
         ("What I learned", "In motion, pacing is everything. My first video draft needed smoother transitions and a clearer link between visuals and narration."),
         ("Next time", "I’d test the flow with real people who struggle with sleep, and see if the morning reflection actually helps them remember more.")]},
@@ -165,7 +165,7 @@ PROJECTS = [
        "intro": "Once the fit worked, whole plates of blue Droplets went through a Bambu Lab A1.",
        "images": [img("images/droplet/printer.jpg", "Bambu Lab A1 printer loaded with blue filament", ratio="3/4", cap="Blue PLA loaded on the A1."),
                   img("images/droplet/plate-blue.jpg", "Print bed with two rows of blue droplet shapes", ratio="3/4", cap="Two rows of drops, mid-print."),
-                  img("images/droplet/plate-parts.jpg", "Print bed with blue droplet bodies and rings", ratio="3/4", cap="A full plate of bodies and rings.")]},
+                  img("images/droplet/plate-parts.jpg", "Print bed with blue rings mid-print", ratio="3/4", cap="A plate of blue rings, mid-print.")]},
       {"type": "images", "title": "Ready for the shelf", "label": "Packaging", "cols": 3,
        "intro": "Each Droplet hangs on a bottle-shaped card printed with the logo, sealed in a black pouch with a holographic window.",
        "images": [img("images/droplet/card.jpg", "Bottle-shaped backing card with the Droplet logo and keychain", ratio="3/4", cap="The bottle-shaped backing card."),
@@ -191,7 +191,7 @@ PROJECTS = [
     ],
   },
   {
-    "slug": "vows", "title": "VOWS", "year": "2026",
+    "slug": "vows", "note": "A student project. Stories and photos are placeholder content used for class.", "title": "VOWS", "year": "2026",
     "tags": "Editorial · Typography · Web",
     "summary": "A magazine about nontraditional weddings, later turned into an interactive website.",
     "cover": img("images/vows/cover.jpg", "VOWS wordmark"),
@@ -266,7 +266,7 @@ PROJECTS = [
     ],
   },
   {
-    "slug": "the-bench", "title": "The Bench Film Festival", "year": "2025",
+    "slug": "the-bench", "note": "A fictional festival for a student project. Film stills and the newspaper masthead are for demonstration only.", "title": "The Bench Film Festival", "year": "2025",
     "tags": "Brand identity · Print",
     "summary": "Identity, a 24-page program and a poster for a festival of true crime and documentary film.",
     "cover": img("images/bench/cover.jpg", "The Bench festival program, tickets and envelope"),
@@ -336,14 +336,14 @@ PROJECTS = [
        "images": [img("images/bench/photo-envelope.jpg", "Printed program, envelope and tickets", ratio="4/3", cap="The printed program, envelope and tickets."),
                   img("images/bench/photo-spread.jpg", "Inside the printed program", ratio="4/3", cap="Inside the printed program."),
                   img("images/bench/photo-newspaper.jpg", "Printed newspaper ad", ratio="4/3", cap="The printed newspaper ad.")]},
-      {"type": "reflection", "quote": "“Beyond the headlines, just seeking truth through cinema.”", "points": [
+      {"type": "reflection", "quote": "“A strong metaphor does more than a strong image.”", "points": [
         ("What worked", "Resetting the concept in week 5 was scary, but it gave every piece one clear idea, judgment, and after that each decision got easier."),
         ("What I learned", "A strong metaphor does more than a strong image. The scale, the bench and the gavel all point back to the same question."),
         ("Next time", "I’d test my concept on people earlier, before spending weeks on a direction, and push the website further.")]},
     ],
   },
   {
-    "slug": "paws-pastries", "title": "Paws & Pastries", "year": "2025",
+    "slug": "paws-pastries", "note": "A fictional café for a class project.", "title": "Paws & Pastries", "year": "2025",
     "tags": "Brand identity · Print",
     "summary": "A warm, playful identity for a dog-friendly café: logo, menus and a 24 × 36 in poster.",
     "cover": img("images/paws/cover.jpg", "Paws & Pastries bone-shaped logo"),
@@ -366,7 +366,7 @@ PROJECTS = [
        "intro": "I sketched 100 marks, literal and metaphoric, then ran the name through hundreds of typefaces. The ten strongest went into Illustrator. The winner was a bone holding the name, simple enough to work at any size.",
        "images": [img("images/paws/sketches.jpg", "Early logo sketch", fit=True, bg="paper", ratio="1/1", cap="An early sketch: a dog and a pastry in one line."),
                   img("images/paws/type-test.jpg", "Type test of the name", fit=True, bg="paper", ratio="1/1", cap="A type run, testing how the name reads in different letterforms."),
-                  img("images/paws/refined-logos.gif", "Animation of the ten refined logos", fit=True, bg="paper", ratio="1/1", cap="The ten refined marks, each testing a different idea.")]},
+                  img("images/paws/refined-logos.gif", "Animation cycling through the refined logos", fit=True, bg="paper", ratio="1/1", cap="The refined marks, shown one after another.")]},
       {"type": "images", "title": "The dual lockup", "label": "Week 4", "cols": 3,
        "intro": "One mark, two shapes: a horizontal bone for signs and the website, and a stacked version for menus and narrow pieces. I tested both in positive and negative, so the weight holds on any background.",
        "images": [img("images/paws/lockup-bone.jpg", "Horizontal bone lockup", fit=True, bg="paper", ratio="1/1", cap="Horizontal lockup, in black."),
@@ -394,7 +394,7 @@ PROJECTS = [
        "notes": ["Put each part of the system in its own chocolate panel, so the poster reads as one brand, not a list.",
                  "Added real applications, like tote bags, coffee cups and signage, to show the brand in use."]},
       {"type": "steps", "heading": "Seven weeks, from memory to menu.", "steps": [
-        ("Week 1", "Strategy", "Mind maps, trueline, personas and two moodboards."),
+        ("Week 1", "Strategy", "Mind maps, timeline, personas and two moodboards."),
         ("Week 2", "Explore", "100 logo marks and a type run of the name."),
         ("Week 3", "Refine", "Ten marks drawn in Illustrator and tested at every size."),
         ("Weeks 4–5", "System", "Dual lockup, menus, patterns and graphic elements."),
@@ -403,10 +403,10 @@ PROJECTS = [
        "images": [img("images/paws/photo-menu.jpg", "Printed menu", ratio="4/3", cap="The printed main menu."),
                   img("images/paws/bone-menu.jpg", "Bone-shaped pup menu", fit=True, bg="paper", ratio="4/3", cap="The bone-shaped pup menu."),
                   img("images/paws/menus-photo.jpg", "Printed menus together", ratio="4/3", cap="Both menus, cut and printed.")]},
-      {"type": "reflection", "quote": "“Move past first-thought solutions.”", "points": [
-        ("What worked", "Drawing 100 marks pushed me past the obvious paw print. The bone shape only showed up after the easy ideas ran out."),
+      {"type": "reflection", "quote": "“The bone shape only showed up after the easy ideas ran out.”", "points": [
+        ("What worked", "Drawing 100 marks pushed me past the obvious paw print."),
         ("What I learned", "Designing in black and white first made the type stronger. Color is easier to add when the layout already works."),
-        ("Next time", "I’d design more of the café itself, like signs, cups and the patio, to show the brand in its space.")]},
+        ("Next time", "I’d give the applications their own section, with full-size mockups of the signs, cups and patio instead of small views on the poster.")]},
     ],
   },
   {
@@ -435,11 +435,11 @@ PROJECTS = [
       {"type": "images", "title": "Choosing Splash Zone", "label": "Week 2", "cols": 2,
        "intro": "After critique, Splash Zone won: the most playful tone, the strongest tie to its space, and the most immersive. We then tested placement, scale and vinyl at full size.",
        "images": [img("images/splash/proposal-8.jpg", "Final options slide", ratio="16/9", cap="The final options side by side."),
-                  img("images/splash/mockups.jpg", "Splash Zone mockup on a stall door", fit=True, bg="paper", ratio="16/9", cap="A mockup of the hazard sign on a real stall door.")]},
+                  img("images/splash/mockup.jpg", "Gray paper mockup of the logo and drips", fit=True, bg="paper", ratio="16/9", cap="Week 2: a gray paper mockup of the logo and drips, tested on the wall.")]},
       {"type": "beforeafter", "title": "From mockup to wall", "label": "Weeks 2–4",
        "intro": "Our first idea was a single hazard sign. Testing it at full size showed it felt like a real sign and got ignored, so we let the letters splash across the whole room instead.",
-       "before": img("images/splash/mockup.jpg", "Early wall mockup", fit=True, bg="apricot", ratio="4/3", cap="Week 2: gray paper mockups of the logo and drips on the wall."),
-       "after": img("images/splash/installed.jpg", "Installed blue vinyl", ratio="4/3", cap="Week 4: blue vinyl letters spilling across the tiles."),
+       "before": img("images/splash/mockups.jpg", "Hazard sign mockup on a stall door", fit=True, bg="apricot", ratio="4/3", cap="The first idea: one hazard sign on a stall door."),
+       "after": img("images/splash/install.jpg", "Blue vinyl Splash Zone lettering across the bathroom wall", ratio="4/3", cap="The final room: blue vinyl letters spilling across the tiles."),
        "notes": ["Went from one sign to letters scattered around the whole room, so you’re surrounded.",
                  "Switched from gray to a bright blue that reads like water on the tiles.",
                  "Placed the drips around fixtures and corners, so the type seems to react to the space."]},
@@ -450,11 +450,11 @@ PROJECTS = [
         ("Week 4", "Install", "Installed the final vinyl in the bathroom.")]},
       {"type": "images", "title": "The installation", "label": "Final", "cols": 3,
        "images": [img("images/splash/team.jpg", "The team in the installation", ratio="4/5", cap="Our team in the finished room."),
-                  img("images/splash/wall.jpg", "Wall view", ratio="4/5", cap="The view from the door."),
-                  img("images/splash/tests.jpg", "Placement detail", fit=True, bg="apricot", ratio="4/5", cap="Drips placed around the fixtures.")]},
-      {"type": "reflection", "quote": "“It really shifted how I think about type.”", "points": [
+                  img("images/splash/wall.jpg", "Mockups pinned on a hallway wall above a Dry Zone floor sign", ratio="4/5", cap="Mockups and room photos pinned up for critique, with a “Dry Zone” floor sign."),
+                  img("images/splash/installed.jpg", "Blue floor tape in front of the urinal", ratio="4/5", cap="Blue floor tape and a small wall sign mark where to stand.")]},
+      {"type": "reflection", "quote": "“Space changes meaning. The same letters feel funny in a bathroom and anxious in a window.”", "points": [
         ("What worked", "Testing at full size. Paper mockups on the real wall showed us what a sketch never could."),
-        ("What I learned", "Space changes meaning. The same letters feel funny in a bathroom and anxious in a window.")]},
+        ("What I learned", "Where type lives is part of the design. The room shaped how people read every letter.")]},
     ],
   },
   {
@@ -482,7 +482,7 @@ PROJECTS = [
        "intro": "Boat lettering has to read from the dock, survive sun and spray, and fit curves that are never quite flat.",
        "images": [img("images/gator/install1.jpg", "Weak Moment transom lettering", ratio="3/4", cap="Transom lettering, sized and spaced to read from across the water."),
                   img("images/gator/install5.jpg", "Hang On Stoopy deck graphic", ratio="3/4", cap="A script name cut in vinyl and laid onto the deck."),
-                  img("images/gator/install6.jpg", "Blue boat with hull graphics", ratio="3/4", cap="Hull graphics designed to follow the curve of the boat.")]},
+                  img("images/gator/install6.jpg", "Blue boat with hull graphics", ratio="3/4", cap="“Windjammer” lettered along the hull.")]},
       {"type": "images", "title": "One idea, many surfaces", "label": "A client set", "cols": 3,
        "intro": "One customer wanted their dog on everything. I turned a photo into a clean graphic, then adapted it for the boat, the hull script and a dock box, so the set feels like one brand.",
        "images": [img("images/gator/install4.jpg", "Living the Dream script on a boat", ratio="3/4", cap="“Living the Dream!” in script along the hull."),
@@ -523,7 +523,8 @@ def head(title, desc, r, image="images/share.jpg", path=""):
 <meta property="og:title" content="{escape(full)}">
 <meta property="og:description" content="{escape(desc)}">
 <meta property="og:image" content="{SITE_URL}/{image}">
-<meta property="og:url" content="{SITE_URL}/{path}">
+<meta property="og:url" content="{SITE_URL}/{"" if path == "index.html" else path}">
+<link rel="canonical" href="{SITE_URL}/{"" if path == "index.html" else path}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="{r}images/monogram.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -608,6 +609,7 @@ def page_home():
   <h1 class="display-xl">Designing everyday things that feel <em class="accent">personal.</em></h1>
   <div class="hero-row">
     <p class="body-l">I'm Amanda, a design student at MassArt. I make brands, apps and spaces, from a café identity to a wedding app for couples and their guests.</p>
+    <!-- TODO(Amanda): pick one positioning line for Home and About: "design and marketing" or "branding and UI/UX". -->
     <div class="latest"><p class="label muted">Currently</p><p>Looking for design and marketing internships for summer 2027.</p></div>
   </div>
 </section></div>
@@ -639,6 +641,7 @@ def page_home():
     </a>
 """
     html += f"""  </div>
+  <a class="personal-thumbs" href="personal.html" aria-label="Personal work"><img src="images/personal/givinghope.jpg" alt="Giving Hope poster" loading="lazy"><img src="images/personal/uzi3.jpg" alt="Hand-painted sneakers" loading="lazy"><img src="images/personal/bunny.jpg" alt="Strawberry Bunny character" loading="lazy"></a>
   <a class="text-row" href="personal.html"><span class="heading-s">Personal work</span><span class="muted" style="font-weight:500">Posters, sneakers and illustrations&nbsp; →</span></a>
 </section>
 <section class="wrap">
@@ -654,7 +657,7 @@ def page_home():
 
 CAPS = """<div class="dark-head"><p class="display-l" style="max-width:860px">I like projects where a brand, a screen and a real place all tell the same story.</p><p class="label light">What I do</p></div>
     <div class="caps">
-      <div><span class="label light">01</span><h3 class="heading-s">Brand identity</h3><p class="body-s">Logos, type systems and print, like Paws &amp; Pastries and The Bench.</p></div>
+      <div><span class="label light">01</span><h3 class="heading-s">Brand identity</h3><p class="body-s">Logos, type systems and print, like Paws &amp; Pastries, The Bench and Droplet.</p></div>
       <div><span class="label light">02</span><h3 class="heading-s">Editorial &amp; type</h3><p class="body-s">Magazines, layouts and type you can walk into, like VOWS and Splash Zone.</p></div>
       <div><span class="label light">03</span><h3 class="heading-s">UX/UI &amp; apps</h3><p class="body-s">Research, flows and working apps, like DreamCast and Intertwine.</p></div>
       <div><span class="label light">04</span><h3 class="heading-s">Print &amp; production</h3><p class="body-s">Signs, vinyl and printed pieces, like Gator Graphix and VOWS.</p></div>
@@ -684,6 +687,7 @@ def case_top(p, r):
   <p class="label accent">{p['eyebrow']}</p>
   <h1 class="display-xl">{escape(p['title'])}</h1>
   <p class="body-l measure">{escape(p['intro'])}</p>
+  {f'<p class="body-s muted measure cs-note">{escape(p["note"])}</p>' if p.get("note") else ""}
 </section></div>
 """
     return html + facts_html(p["facts"])
@@ -931,8 +935,9 @@ def page_about():
   </ul></div>
   <div><h2 class="label muted">Courses</h2><ul>
     <li><span class="heading-s">Graphic Design 2: Making Meaning</span><span class="body-s muted">Fall 2025 · Paws &amp; Pastries, The Bench</span></li>
-    <li><span class="heading-s">Information Architecture</span><span class="body-s muted">DreamCast</span></li>
+    <li><span class="heading-s">Information Architecture 1</span><span class="body-s muted">Fall 2025 · DreamCast</span></li>
     <li><span class="heading-s">Typography III</span><span class="body-s muted">Spring 2026 · VOWS, Splash Zone</span></li>
+    <li><span class="heading-s">Graphic Design 4</span><span class="body-s muted">Fall 2026 · Droplet</span></li>
     <li><span class="heading-s">Everyday Enhancements</span><span class="body-s muted">Fall 2026 · Intertwine (in progress)</span></li>
   </ul></div>
   <div><h2 class="label muted">Experience</h2><ul>
@@ -944,11 +949,14 @@ def page_about():
 </section>
 <section class="dark" style="margin-bottom:0"><div class="wrap">
   """ + CAPS + """
-  <p class="label light" style="margin-top:64px">Skills &amp; tools</p>
+  <p class="label light" style="margin-top:64px">Skills</p>
   <ul class="chips">""" + "".join(f"<li>{escape(s)}</li>" for s in [
         "Brand identity", "Editorial layout", "Typography", "UX/UI", "Wireframing", "User research", "Personas & journey maps",
-        "Storyboarding", "Motion", "AR concepts", "Figma", "Illustrator", "InDesign", "Photoshop", "After Effects", "Procreate",
-        "Print production", "Vinyl & large format", "Equipment operation"]) + """</ul>
+        "Storyboarding", "Motion", "Print production", "Vinyl & large-format printing", "3D printing"]) + """</ul>
+  <p class="label light" style="margin-top:40px">Tools</p>
+  <ul class="chips">""" + "".join(f"<li>{escape(s)}</li>" for s in [
+        "Figma", "Illustrator", "InDesign", "Photoshop", "After Effects", "Procreate", "Tinkercad",
+        "SwiftUI", "HTML/CSS/JS", "Supabase"]) + """</ul>
 </div></section>
 """
     return html + footer(r)
