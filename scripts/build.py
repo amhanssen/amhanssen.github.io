@@ -19,8 +19,8 @@ RESUME = "files/Amanda-Hanssen-Resume.pdf"
 GUEST_SITE = "https://amhanssen.github.io/Intertwine/?invite=demo-rosa"
 
 
-def img(src, alt, fit=False, bg=None, ratio=None, cap=None):
-    return {"src": src, "alt": alt, "fit": fit, "bg": bg, "ratio": ratio, "cap": cap}
+def img(src, alt, fit=False, bg=None, ratio=None, cap=None, maxw=None):
+    return {"src": src, "alt": alt, "fit": fit, "bg": bg, "ratio": ratio, "cap": cap, "maxw": maxw}
 
 
 # ---------------------------------------------------------------- projects
@@ -68,7 +68,7 @@ PROJECTS = [
                   ("Sage", "#E3ECE2", "Success: RSVP yes"), ("Clay", "#9E3A3A", "Errors")],
        "type_faces": [("Headings", "Elido", "A warm, characterful sans with a touch of romance, for screen titles and the wedding’s big moments."),
                       ("Interface", "SF Pro", "Apple’s system font for body text and controls, so the app feels at home on iPhone.")],
-       "images": [img("images/intertwine/components.jpg", "Component library", fit=True, bg="paper", ratio="1812/1200", cap="The component library: buttons, fields, badges, cards, tabs and flow parts, each with light and dark versions.")]},
+       "images": [img("images/intertwine/components.jpg", "Component library", fit=True, bg="paper", ratio="1280/2000", maxw="760px", cap="The component library: buttons, fields, badges, cards, tabs and flow parts, all built on the shared color and spacing tokens.")]},
       {"type": "steps", "heading": "From site map to a working app.", "steps": [
         ("Step 1", "Research", "How couples and guests share wedding info today."),
         ("Step 2", "Site map", "Every screen for both the couple and the guest."),
@@ -78,7 +78,7 @@ PROJECTS = [
       {"type": "reflection", "label": "Where it stands", "quote": "Still in progress: one wedding, in one place.", "points": [
         ("Working so far", "Designing both sides at once. Seeing the couple’s screen next to the guest’s made every feature, like RSVPs and the registry, connect end to end."),
         ("What I’m learning", "Building it myself changes how I design: shared tokens and components save hours and keep Figma and code in sync."),
-        ("Next steps", "Finish testing with a real couple, show photos added on other phones, and add push notifications for new RSVPs and questions.")]},
+        ("Next steps", "Finish testing with a real couple, add push notifications for new RSVPs and questions, and share a test version with real users.")]},
     ],
   },
   {
@@ -142,8 +142,8 @@ PROJECTS = [
     "cover": img("images/droplet/cover.jpg", "The Droplet logo: a blue water-drop character above a curved wordmark"),
     "eyebrow": "Case study · Product design · 2026",
     "intro": "A keychain that spins one click every time you refill your water bottle. No app, no streaks, no guilt: just a satisfying click and a number that goes up.",
-    "facts": [("My role", "Concept, character, 3D printing, packaging and social posts"), ("Timeline", "Fall 2026"),
-              ("Course", "Everyday Enhancements · MassArt [check module]"), ("Tools", "Bambu Lab A1 3D printer, PLA [add design apps]")],
+    "facts": [("My role", "Concept, character, 3D printing, packaging and social posts"), ("Timeline", "6 weeks · Fall 2026"),
+              ("Course", "Graphic Design 4, with Joe Quackenbush"), ("Tools", "Illustrator, Tinkercad, Bambu Studio, Bambu Lab A1 3D printer, PLA")],
     "hero": [img("images/droplet/print-blue.jpg", "A blue Droplet keychain resting on a laptop", ratio="628/620"),
              img("images/droplet/pack-sky.jpg", "Packaged Droplet in a holographic pouch against a cloudy sky", ratio="628/620")],
     "story": [
@@ -416,7 +416,7 @@ PROJECTS = [
     "cover": img("images/splash/cover.jpg", "Blue vinyl lettering on bathroom tiles"),
     "eyebrow": "Case study · Typography installation · 2026",
     "intro": "A team installation that splashes vinyl type across a campus bathroom, turning an everyday room into a playful, slightly uncomfortable experience.",
-    "facts": [("My role", "Team project: concept, mockups and installation [add your specific part]"), ("Timeline", "4 weeks · Spring 2026"),
+    "facts": [("My role", "Team project: I designed and installed the piece with my group"), ("Timeline", "4 weeks · Spring 2026"),
               ("Course", "Typography III, with Katherine Hughes"), ("Tools", "Illustrator, Photoshop, Procreate, Figma")],
     "hero": [img("images/splash/install.jpg", "Splash Zone installation", ratio="1280/620")],
     "story": [
@@ -446,7 +446,7 @@ PROJECTS = [
       {"type": "steps", "heading": "From mood board to tile wall.", "steps": [
         ("Week 1", "Research", "Scouting campus spaces, three concepts, mood boards and mockups."),
         ("Week 2", "Test", "Chose Splash Zone; full-size mockups for placement, scale and vinyl."),
-        ("Week 3", "Produce", "[Add what your team did this week, like cutting the vinyl.]"),
+        ("Week 3", "Refine", "Improved the design and locked in the final version."),
         ("Week 4", "Install", "Installed the final vinyl in the bathroom.")]},
       {"type": "images", "title": "The installation", "label": "Final", "cols": 3,
        "images": [img("images/splash/team.jpg", "The team in the installation", ratio="4/5", cap="Our team in the finished room."),
@@ -454,8 +454,7 @@ PROJECTS = [
                   img("images/splash/tests.jpg", "Placement detail", fit=True, bg="apricot", ratio="4/5", cap="Drips placed around the fixtures.")]},
       {"type": "reflection", "quote": "“It really shifted how I think about type.”", "points": [
         ("What worked", "Testing at full size. Paper mockups on the real wall showed us what a sketch never could."),
-        ("What I learned", "Space changes meaning. The same letters feel funny in a bathroom and anxious in a window."),
-        ("Next time", "[Add your own thought here, for example what you’d change about the install or the teamwork.]")]},
+        ("What I learned", "Space changes meaning. The same letters feel funny in a bathroom and anxious in a window.")]},
     ],
   },
   {
@@ -578,6 +577,8 @@ def footer(r):
 def figure(i, r, extra=""):
     cls = " ".join(c for c in ["fit" if i["fit"] else "", f"on-{i['bg']}" if i["bg"] else "", extra] if c)
     style = f' style="aspect-ratio:{i["ratio"]}"' if i.get("ratio") else ""
+    if i.get("maxw"):
+        style = (style[:-1] + ";" if style else ' style="') + f'max-width:{i["maxw"]};margin-inline:auto"'
     bg = ' style="background:var(--apricot)"' if i.get("bg") == "apricot" else ""
     if bg and style:
         style = style[:-1] + ';background:var(--apricot)"'
@@ -793,7 +794,7 @@ def block_html(b, r):
         return f'''<section class="dark reflection"><div class="wrap">
   <p class="label light">{escape(b.get("label","Reflection"))}</p>
   <p class="display-l quote hang">{escape(b["quote"])}</p>
-  <div class="reflect-grid">{items}</div>
+  <div class="reflect-grid{" two" if len(b["points"]) == 2 else ""}">{items}</div>
 </div></section>\n'''
     raise ValueError("unknown block " + t)
 
@@ -919,7 +920,7 @@ def page_about():
     <p class="label muted">About</p>
     <h1 class="display-xl">Hi, I'm Amanda.</h1>
     <p class="body-l">I'm a Communication Design student at MassArt, with a minor in the Business of Creative Industries. I split my time between Boston and Laconia, New Hampshire.</p>
-    <p>I love taking a project from first sketch to the finished, printed thing. Over two summers at Gator Graphix I designed boat graphics, signs and banners, working one on one with clients to get every detail right.</p>
+    <p>I’ve always loved making things people can see and touch, from signs to printed pieces. Now I’m focused on branding and UI/UX: shaping how a brand looks, and how people use it on screen.</p>
     <div class="btns"><a class="btn" href="{RESUME}" target="_blank" rel="noopener">Download resume</a><a class="btn outline" href="mailto:{EMAIL}">Get in touch</a></div>
   </div>
 </section></div>
