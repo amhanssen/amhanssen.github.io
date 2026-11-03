@@ -11,12 +11,12 @@ from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE_URL = "https://amhanssen.github.io"
+SITE_URL = "https://amandahanssen.com"
 EMAIL = "amandahanssen04@gmail.com"
 LINKEDIN = "https://www.linkedin.com/in/amanda-hanssen-8711a0237/"
 INSTAGRAM = "https://www.instagram.com/reidlinmae/"
 RESUME = "files/Amanda-Hanssen-Resume.pdf"
-GUEST_SITE = "https://amhanssen.github.io/Intertwine/?invite=demo-rosa"
+GUEST_SITE = "https://amandahanssen.com/Intertwine/?invite=demo-rosa"
 
 
 def img(src, alt, fit=False, bg=None, ratio=None, cap=None, maxw=None):

@@ -12,7 +12,7 @@ Read this first. It sums up everything done so far, so a new chat can pick up wi
 - Wants to save credits: keep answers short, batch changes, avoid extra screenshots and re-checks unless something looks off.
 
 ## Where things live
-- **Live site:** https://amhanssen.github.io (GitHub Pages, public repo `amhanssen/amhanssen.github.io`, branch `main`). Pages can sit in GitHub's queue a few minutes after a push.
+- **Live site:** https://amandahanssen.com (custom domain from GoDaddy, set by the `CNAME` file; old address https://amhanssen.github.io redirects. GitHub Pages, public repo `amhanssen/amhanssen.github.io`, branch `main`). Pages can sit in GitHub's queue a few minutes after a push.
 - **Site folder:** `~/Documents/GitHub/amhanssen.github.io`
 - **Figma:** file `RTCuHNsYRQknTtg1j0gi1X` ("Portfolio"). Page "Portfolio" has Home, About, Personal, all case studies (desktop + phone), the resume frame ("Resume — Letter"), share card, and components (Nav, Footer, Monogram). Page "Archive (removed projects)" has Through Monet, LRMHC and Recipe cards. Figma case studies are the *older, shorter* versions; the website has the detailed ones.
 - **Source files:** `~/Desktop/Classes` (class work, ~19 GB), `~/Documents/Portfoilo` (Gator, personal work, photos), old site https://amhanssen.myportfolio.com (week-by-week write-ups).

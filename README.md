@@ -1,6 +1,6 @@
 # Amanda Hanssen — portfolio
 
-Live at **https://amhanssen.github.io** (once published with GitHub Pages).
+Live at **https://amandahanssen.com** (once published with GitHub Pages).
 Designed in the Figma file *Portfolio*.
 
 ## How it's built
