@@ -30,13 +30,13 @@ PROJECTS = [
   {
     "slug": "intertwine", "title": "Intertwine", "year": "2026", "featured": True,
     "tags": "iOS app · Website · Brand · In progress",
-    "summary": "One wedding, in one place: an iPhone app where couples plan events, guests and a registry, and a website where every guest RSVPs with a personal link. A work in progress, designed and built from research to working code.",
+    "summary": "One wedding, in one place: an iPhone app (and a matching website) where couples plan events, guests and a registry, and a website where every guest RSVPs with a personal link. A work in progress, designed and built from research to working code.",
     "cover_phones": ["images/intertwine/o7-home.jpg", "images/intertwine/gh1-guesthome.jpg"],
     "eyebrow": "Case study · In progress · iOS app & website · 2026",
-    "intro": "One wedding, in one place. An iPhone app where couples plan events, guests and a registry, and a website where each guest opens a personal invite link: no app or account needed.",
+    "intro": "One wedding, in one place. Couples plan events, guests and a registry in an iPhone app or on the web, and each guest opens a personal invite link: no app or account needed.",
     "buttons": [("Try the couple website", COUPLE_SITE), ("See the guest website", GUEST_SITE)],
     "facts": [("My role", "Solo: research, UX/UI, brand, and building the app and website"), ("Status", "In progress · Fall 2026"),
-              ("Course", "Everyday Enhancements, Module 3 · MassArt"), ("Tools", "Figma, SwiftUI, HTML/CSS/JS, Supabase")],
+              ("Course", "Everyday Enhancements, Module 3 · MassArt"), ("Tools", "Figma, Illustrator, SwiftUI, HTML/CSS/JS, Supabase")],
     "story": [
       {"type": "phonepanel", "images": [img("images/intertwine/o1-welcome.jpg", "Intertwine welcome screen"), img("images/intertwine/o7-home.jpg", "Couple home screen"), img("images/intertwine/gh1-guesthome.jpg", "Guest home screen")]},
       {"type": "split", "label": "The problem", "heading": "Wedding details live everywhere: texts, spreadsheets, websites and registries.",
@@ -64,23 +64,33 @@ PROJECTS = [
                   img("images/intertwine/gw1-wear.jpg", "What to wear", cap="Dress codes with outfit ideas for each event."),
                   img("images/intertwine/gd2-registry.jpg", "Guest registry", cap="“I’ll get this” claims a gift so nobody doubles up."),
                   img("images/intertwine/gh3-sent.jpg", "RSVP sent", cap="RSVP in a tap, with a clear confirmation.")]},
+      {"type": "site", "who": "Couple", "title": "For couples: the app, on the web too", "label": "Couple website",
+       "intro": "Not every couple has an iPhone, and a developer account costs $99 a year. So the couple side also runs as a free website, with the same account, the same wedding and the same tabs. Changes made on the phone or the web show up on both.",
+       "desktop": "images/intertwine/cw-desktop.jpg", "mobile": "images/intertwine/cw-home.jpg",
+       "cap": "The couple website with the Mia & Ryan demo wedding. Home leads with the countdown and a big card for the next event."},
+      {"type": "phones", "title": "Built from feedback", "label": "Couple website",
+       "intro": "After the first version, feedback asked for a simpler registry, a bigger next event, a way to reset a password and fonts that match the brand. Each became a change on the site.",
+       "images": [img("images/intertwine/cw-registry.jpg", "Couple registry", cap="The Registry tab is just the gift list now."),
+                  img("images/intertwine/cw-thanks.jpg", "Thank-you notes on Home", cap="Thank-you notes and other stores moved to Home, where couples check in daily."),
+                  img("images/intertwine/cw-guests.jpg", "Guest list", cap="Add a guest in one step and see who has replied."),
+                  img("images/intertwine/cw-forgot.jpg", "Reset password", cap="“Forgot password?” emails a link to choose a new one.")]},
       {"type": "system", "title": "The system", "label": "Brand pass",
        "intro": "Calm, warm and trustworthy: wedding planning is stressful, so the interface stays quiet. Colors and spacing live as tokens shared by Figma, the app and the website, so all three always match.",
        "colors": [("Canvas", "#FCF5E5", "Background"), ("Slate", "#3F5562", "Accent and buttons"), ("Ink", "#202B31", "Text"),
                   ("Sage", "#E3ECE2", "Success: RSVP yes"), ("Clay", "#9E3A3A", "Errors")],
-       "type_faces": [("Headings", "Elido", "The brand heading font, warm with a touch of romance. Until it’s licensed for the app and web, the app uses the system font and the website uses Alegreya Sans as stand-ins."),
+       "type_faces": [("Headings", "Elido", "The brand heading font, warm with a touch of romance. Both websites load it from Adobe Fonts; the app still uses the system font as a stand-in."),
                       ("Interface", "SF Pro", "Apple’s system font for body text and controls, so the app feels at home on iPhone.")],
        "images": [img("images/intertwine/components.jpg", "Component library", fit=True, bg="paper", ratio="1280/2000", maxw="760px", cap="The component library: buttons, fields, badges, cards, tabs and flow parts, all built on the shared color and spacing tokens.")]},
       {"type": "steps", "heading": "From site map to a working app.", "steps": [
         ("Step 1", "Research", "How couples and guests share wedding info today."),
         ("Step 2", "Site map", "Every screen for both the couple and the guest."),
         ("Step 3", "Brand pass", "A script monogram, warm neutrals, tokens and components."),
-        ("Step 4", "Build", "A SwiftUI iPhone app and a guest website, connected by Supabase."),
+        ("Step 4", "Build", "A SwiftUI iPhone app, a guest website and a couple website, all connected by Supabase."),
         ("Now", "Test", "Testing with a real wedding, real invites and RSVPs, and fixing what breaks.")]},
       {"type": "reflection", "label": "Where it stands", "quote": "Still in progress: one wedding, in one place.", "points": [
         ("Working so far", "Designing both sides at once. Seeing the couple’s screen next to the guest’s made every feature, like RSVPs and the registry, connect end to end."),
         ("What I’m learning", "Building it myself changes how I design: shared tokens and components save hours and keep Figma and code in sync."),
-        ("Next steps", "Finish testing with a real couple, add push notifications for new RSVPs and questions, and share a test version with real users.")]},
+        ("Next steps", "Finish testing with a real couple, add push notifications for new RSVPs and questions, bring Elido into the app, and share a test version with real users.")]},
     ],
   },
   {
@@ -790,7 +800,7 @@ def block_html(b, r):
         ph = "".join(f'<div class="phone{" big" if k == 1 else ""}"><img src="{r}{i["src"]}" alt="{escape(i["alt"])}" loading="lazy"></div>' for k, i in enumerate(b["images"]))
         return f'<section class="wrap"><div class="phones-panel">{ph}</div></section>\n'
     if t == "site":
-        return f'''<section class="guests"><div class="wrap">{head}{intro}<div class="site-row"><div class="shot"><img src="{r}{b["desktop"]}" alt="Guest website on desktop" loading="lazy"></div><div class="phone"><img src="{r}{b["mobile"]}" alt="Guest website on a phone" loading="lazy"></div></div><p class="body-s muted caption">{escape(b["cap"])}</p></div></section>\n'''
+        return f'''<section class="guests"><div class="wrap">{head}{intro}<div class="site-row"><div class="shot"><img src="{r}{b["desktop"]}" alt="{b.get("who","Guest")} website on desktop" loading="lazy"></div><div class="phone"><img src="{r}{b["mobile"]}" alt="{b.get("who","Guest")} website on a phone" loading="lazy"></div></div><p class="body-s muted caption">{escape(b["cap"])}</p></div></section>\n'''
     if t == "steps":
         st = "".join(f'<div><p class="label accent">{w}</p><h3 class="heading-s">{escape(h)}</h3><p class="body-s muted">{escape(d)}</p></div>' for w, h, d in b["steps"])
         return f'<section class="process"><div class="wrap"><p class="label muted">{escape(b.get("label","Process"))}</p><h2 class="display-l">{escape(b["heading"])}</h2><div class="steps">{st}</div></div></section>\n'

@@ -34,7 +34,7 @@ Read this first. It sums up everything done so far, so a new chat can pick up wi
 Featured: **Intertwine** (marked *In progress*). Then DreamCast, VOWS, The Bench Film Festival, Paws & Pastries, Splash Zone, Gator Graphix. Plus a Personal page (posters, sneakers, characters).
 - **Droplet** added Oct 21, 2026 (after DreamCast). Still [check module] and [add design apps] in its facts; reflection drafted by Claude.
 - **Hidden** (`"hidden": True` in build.py): **Music Box**. Waiting for her images and text.
-- Verified facts: Bench fonts Social Gothic + Paralucent, Pantones 533/468/3546/4975/7544 C. VOWS fonts Elido (sans, wordmark/headlines) + Odile (serif), palette wine/butter/cream/gold/plum, 8 × 9.5 in. Paws fonts Decoy + Almarai. Intertwine fonts Elido (headings) + SF Pro (UI); the guest website uses Alegreya Sans only as a stand-in.
+- Verified facts: Bench fonts Social Gothic + Paralucent, Pantones 533/468/3546/4975/7544 C. VOWS fonts Elido (sans, wordmark/headlines) + Odile (serif), palette wine/butter/cream/gold/plum, 8 × 9.5 in. Paws fonts Decoy + Almarai. Intertwine fonts Elido (headings) + SF Pro (UI); both websites load Elido from Adobe Fonts; the app still uses the system font.
 
 ## Still open (ask her)
 - Splash Zone: her specific role, Week 3, and "Next time" are still [brackets].
