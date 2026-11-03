@@ -17,6 +17,7 @@ LINKEDIN = "https://www.linkedin.com/in/amanda-hanssen-8711a0237/"
 INSTAGRAM = "https://www.instagram.com/reidlinmae/"
 RESUME = "files/Amanda-Hanssen-Resume.pdf"
 GUEST_SITE = "https://amandahanssen.com/Intertwine/?invite=demo-rosa"
+COUPLE_SITE = "https://amandahanssen.com/Intertwine/couple.html"
 
 
 def img(src, alt, fit=False, bg=None, ratio=None, cap=None, maxw=None):
@@ -33,6 +34,7 @@ PROJECTS = [
     "cover_phones": ["images/intertwine/o7-home.jpg", "images/intertwine/gh1-guesthome.jpg"],
     "eyebrow": "Case study · In progress · iOS app & website · 2026",
     "intro": "One wedding, in one place. An iPhone app where couples plan events, guests and a registry, and a website where each guest opens a personal invite link: no app or account needed.",
+    "buttons": [("Try the couple website", COUPLE_SITE), ("See the guest website", GUEST_SITE)],
     "facts": [("My role", "Solo: research, UX/UI, brand, and building the app and website"), ("Status", "In progress · Fall 2026"),
               ("Course", "Everyday Enhancements, Module 3 · MassArt"), ("Tools", "Figma, SwiftUI, HTML/CSS/JS, Supabase")],
     "story": [
@@ -689,6 +691,7 @@ def case_top(p, r):
   <p class="body-l measure">{escape(p['intro'])}</p>
   {f'<p class="body-s muted measure cs-note">{escape(p["note"])}</p>' if p.get("note") else ""}
   {f'<div class="btns"><a class="btn" href="{escape(p["proto"])}" target="_blank" rel="noopener">Try the prototype&nbsp; ↗</a></div>' if p.get("proto") else ""}
+  {'<div class="btns">' + "".join(f'<a class="btn{"" if i == 0 else " outline"}" href="{escape(u)}" target="_blank" rel="noopener">{escape(t)}&nbsp; ↗</a>' for i, (t, u) in enumerate(p["buttons"])) + '</div>' if p.get("buttons") else ""}
 </section></div>
 """
     return html + facts_html(p["facts"])
