@@ -2,14 +2,14 @@
    Colors and type match the Figma file "Portfolio". */
 
 :root {
-  --apricot: #FFEDD5;      /* page background */
-  --paper: #FFF6EA;        /* soft panels */
+  --apricot: #E9ECF7;      /* page background (soft periwinkle) */
+  --paper: #F6F7FC;        /* soft panels */
   --ink: #2B0616;          /* text */
   --ink-muted: #7A4E5E;
   --crimson: #470B24;      /* dark sections */
   --periwinkle: #B5BEDD;
   --periwinkle-deep: #4F5B9A;
-  --line: #EED3B4;
+  --line: #CDD3EC;
   --on-dark: #FFEDD5;
   --sky: var(--apricot);   /* top of each page: solid, no gradient */
 
