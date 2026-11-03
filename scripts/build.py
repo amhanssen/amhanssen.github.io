@@ -82,7 +82,7 @@ PROJECTS = [
     ],
   },
   {
-    "slug": "dreamcast", "note": "A student concept, not affiliated with Headspace.", "title": "DreamCast", "year": "2025",
+    "slug": "dreamcast", "proto": "https://www.figma.com/proto/WoM22UAjFxfXVJeuQMfhNq/Listen-up-project?page-id=49%3A2&scaling=scale-down&content-scaling=fixed", "note": "A student concept, not affiliated with Headspace.", "title": "DreamCast", "year": "2025",
     "tags": "App concept · UX/UI · Motion",
     "summary": "A Headspace feature that helps you fall asleep and remember your dreams. Personas, journey maps, storyboards, the interface and a motion video, made over seven weeks.",
     "cover": img("images/dreamcast/cover.jpg", "DreamCast on an iPhone lock screen", fit=True, bg="ink"),
@@ -688,6 +688,7 @@ def case_top(p, r):
   <h1 class="display-xl">{escape(p['title'])}</h1>
   <p class="body-l measure">{escape(p['intro'])}</p>
   {f'<p class="body-s muted measure cs-note">{escape(p["note"])}</p>' if p.get("note") else ""}
+  {f'<div class="btns"><a class="btn" href="{escape(p["proto"])}" target="_blank" rel="noopener">Try the prototype&nbsp; ↗</a></div>' if p.get("proto") else ""}
 </section></div>
 """
     return html + facts_html(p["facts"])
